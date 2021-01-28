@@ -23,6 +23,8 @@ const App = () => {
     fetchItems()
   },[])
 
+  console.log(items)
+
   return (
     <div className='container'>
       <Header />
