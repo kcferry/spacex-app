@@ -1,8 +1,9 @@
+import logo from '../img/1594px-SpaceX_Logo_Black.png'
 
 const Header = () => {
     return (
-        <header>
-            <h1>Space X</h1>
+        <header className='center'>
+            <img src={logo} alt=""/>
         </header>
     )
 }
