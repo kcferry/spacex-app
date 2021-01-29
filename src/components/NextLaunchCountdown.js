@@ -6,7 +6,7 @@ const NextLaunchCountDown = ({time}) => {
 
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear(); 
-        let difference = new Date(time) - +new Date();
+        let difference = +new Date(time) - +new Date();
 
         let timeLeft = {};
 
@@ -21,7 +21,8 @@ const NextLaunchCountDown = ({time}) => {
 
           return timeLeft;
 
-        }
+    }
+
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
