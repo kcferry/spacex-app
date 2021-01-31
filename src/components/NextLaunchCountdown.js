@@ -5,17 +5,17 @@ import React, { useState, useEffect } from 'react'
 const NextLaunchCountDown = ({time}) => {
 
     const calculateTimeLeft = () => {
-        let year = new Date().getFullYear(); 
+        //let year = new Date().getFullYear(); 
         let difference = +new Date(time) - +new Date();
 
         let timeLeft = {};
 
         if (difference > 0) {
             timeLeft = {
-              days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-              hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-              minutes: Math.floor((difference / 1000 / 60) % 60),
-              seconds: Math.floor((difference / 1000) % 60)
+              Day: Math.floor(difference / (1000 * 60 * 60 * 24)),
+              Hrs: Math.floor((difference / (1000 * 60 * 60)) % 24),
+              Min: Math.floor((difference / 1000 / 60) % 60),
+              Sec: Math.floor((difference / 1000) % 60)
             };
           }
 
@@ -49,7 +49,7 @@ const NextLaunchCountDown = ({time}) => {
 
       return (
         <div>
-          {timerComponents.length ? <span>Launching in T- {timerComponents}</span> : <span>Time's up!</span>}
+          {timerComponents.length ? <span>T- {timerComponents}</span> : <span>Time's up!</span>}
        </div>  
       )
 }

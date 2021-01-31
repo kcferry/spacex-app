@@ -6,8 +6,8 @@ const NextLaunchMain = ({ isLoading, nextLaunch}) => {
             <div>
             <h1>{nextLaunch.name}</h1>
             <NextLaunchCountdown time={nextLaunch.date_utc}/>
-            <img src={nextLaunch.links.patch.small} alt=""/>
-            <img src={falc9} className=''/>
+            <img src={nextLaunch.links.patch.small} alt="Mission Badge"/>
+            <img src={falc9} alt="Falcon 9" className=''/>
             </div>
             </section>)
 

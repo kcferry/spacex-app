@@ -14,15 +14,14 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios('https://api.spacexdata.com/v4/launches/next')
-
+      const result = await axios.get('https://api.spacexdata.com/v4/launches/next')
+      console.log(result.data)
       setItems(result.data)
       setisLoading(false)
     }
     fetchItems()
   },[])
 
-  
 
   return (
     <div className='container'>
