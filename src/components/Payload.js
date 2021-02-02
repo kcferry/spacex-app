@@ -16,7 +16,7 @@ const Payload = (payloadId) => {
     },[])
 
     return (
-        <div>
+        <div className='payload'>
             <ul>
                 <li>Payload: {payloadItems.type}</li>
                 <li>Mass KG: {payloadItems.mass_kg}</li>
