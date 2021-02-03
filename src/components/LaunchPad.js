@@ -19,10 +19,7 @@ const LaunchPad = (launchLocation) => {
 
     return (
         <div>
-            <ul>
-                <li>Location: {LaunchPadItems.full_name}</li>
-            </ul>
-
+                <h3>Location: {LaunchPadItems.full_name}</h3>
         </div>
     )
 };

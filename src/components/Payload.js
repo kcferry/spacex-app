@@ -16,14 +16,15 @@ const Payload = (payloadId) => {
     },[])
 
     return (
-        <div className='payload'>
-            <ul>
-                <li>Payload: {payloadItems.type}</li>
-                <li>Mass KG: {payloadItems.mass_kg}</li>
-                <li>Orbit: {payloadItems.orbit}</li>
-            </ul>
-
-        </div>
+      <>
+      <li>Payload: {payloadItems.name}</li>
+        <li>Payload Type: {payloadItems.type}</li>
+        <li>Customer: {payloadItems.customers}</li>
+        <li>Mass KG: {payloadItems.mass_kg}</li>
+        <li>Mass LB: {payloadItems.mass_lbs}</li>
+        <li>Orbit: {payloadItems.orbit}</li>
+        <li>Regime: {payloadItems.regime}</li>
+      </>
     )
 };
 

@@ -25,8 +25,11 @@ const App = () => {
 
   return (
     <div className='container'>
-      <Header />
-      { isLoading ? <LoadingPage /> : <NextLaunchMain isLoading={isLoading} nextLaunchItems={items} />}  
+      <Header className='header' />
+      <div className='next-launch-box'>
+        { isLoading ? <LoadingPage /> : <NextLaunchMain isLoading={isLoading} nextLaunchItems={items} />}  
+      </div>
+      
     </div>
   );
 }

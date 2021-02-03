@@ -48,8 +48,8 @@ const NextLaunchCountDown = ({time}) => {
 
 
       return (
-        <div>
-          {timerComponents.length ? <span>T- {timerComponents}</span> : <span>Time's up!</span>}
+        <div className='countdown-box'>
+          {timerComponents.length ? <span className='countdown'>T- {timerComponents}</span> : <span>Time's up!</span>}
        </div>  
       )
 }
