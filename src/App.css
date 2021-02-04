@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+  
   *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -7,11 +10,15 @@
   body {
     background: #000 url('img/spacex--p-KCm6xB9I-unsplash.jpg');
     background-size: cover;
-    margin: 0;
     height: 100vh;
     width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(219, 217, 217);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6rem;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   /*
@@ -52,12 +59,10 @@
     align-items: start;
   }
 
-  img {
-    width: 15%;
-  }
+
 
   .details-box {
-    background: linear-gradient(to right bottom, rgba(38, 38, 53, 0.7), rgba(255, 255, 255, 0.3) );
+    background: linear-gradient(to right bottom, rgba(38, 38, 53, 0.7), rgba(255, 255, 255, 0.3));
     backdrop-filter: blur(0.4rem);
     padding: 0.95em;
     border-radius: 0.6rem;
@@ -70,6 +75,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .webcast {
+    border: noneˇ;
+  }
+
+  h2 {
+    color: rgb(187, 21, 21);
+  }
+
+  .launch-site {
+    grid-column: 3/3;
+    grid-row: 3/4;
+  }
+
+  .leaflet-container {
+    width: 300px;
+    height: 300px;
+    z-index: 30;
+    grid-row: 2/3;
+    grid-column: 3/3;
   }
 
   .badge-img {
@@ -104,13 +130,19 @@
   }
 
   .info li {
-    padding-bottom: 10px;
+    padding: 0.5rem;
   }
 
-  .launch-site {
-    grid-column: 3/3;
-    grid-row: 2/3;
+  .info li:nth-child(odd) {
+    background: linear-gradient(to right bottom, rgba(148, 148, 150, 0.7), rgba(165, 164, 164, 0.3));
+    border-radius: 0 8px 8px 0;
   }
+
+  .info li:nth-child(even) {
+    background: linear-gradient(to right bottom, rgba(5, 5, 5, 0.2), rgba(143, 140, 140, 0.3));
+    border-radius: 0 8px 8px 0;
+  }
+
 
   .countdown-box{
     grid-row: 1/1;

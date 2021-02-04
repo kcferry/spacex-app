@@ -3,6 +3,8 @@ import NextLaunchCountdown from '../components/NextLaunchCountdown'
 import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
 import Rocket from './Rocket'
+import Webcast from './Webcast'
+import LaunchMap from './LaunchMap'
 
 const NextLaunchMain = ({ isLoading, nextLaunchItems}) => {
     return isLoading ? (<h1>Loading...</h1>) : (<section className='container-next-launch'>
@@ -12,10 +14,8 @@ const NextLaunchMain = ({ isLoading, nextLaunchItems}) => {
 
                 <div className='info'>
                     <ul>
-                        <li>
                             <Rocket rocketId={nextLaunchItems.rocket}/>
                             <Payload payloadId={nextLaunchItems.payloads} />
-                        </li>
                     </ul>
                 
                 </div>
@@ -27,6 +27,15 @@ const NextLaunchMain = ({ isLoading, nextLaunchItems}) => {
                 <div className='details-box'>
                     <img className='badge-img' src={nextLaunchItems.links.patch.large} alt="Mission Badge"/>
                     <p className ='nl-details'> {nextLaunchItems.details}</p>
+                </div>
+
+                <div class='leaflet-container'>
+                    <LaunchMap launchLocation={nextLaunchItems.launchpad}/>
+                </div>
+
+                <div className='webcast'>
+                    <h2>Live Now</h2>
+                    <Webcast link={nextLaunchItems.links.youtube_id}/>
                 </div>
 
                 <div className='nl-rocket'>
