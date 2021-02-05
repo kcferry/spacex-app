@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from './components/Header'
 import NextLaunchMain from './components/NextLaunchMain'
@@ -20,17 +20,23 @@ const App = () => {
       setisLoading(false)
     }
     fetchItems()
-  },[])
+  }, [])
 
 
   return (
-    <div className='container'>
-      <Header className='header' />
-      <div className='next-launch-box'>
-        { isLoading ? <LoadingPage /> : <NextLaunchMain isLoading={isLoading} nextLaunchItems={items} />}  
+    <>
+      <div className='container'>
+        <Header className='header' />
       </div>
-      
-    </div>
+
+
+      <section className='showcase'>
+        {isLoading ? <LoadingPage /> : <NextLaunchMain isLoading={isLoading} nextLaunchItems={items} />}
+      </section>
+
+
+
+    </>
   );
 }
 

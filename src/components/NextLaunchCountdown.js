@@ -2,56 +2,56 @@ import React, { useState, useEffect } from 'react'
 
 
 
-const NextLaunchCountDown = ({time}) => {
+const NextLaunchCountDown = ({ time }) => {
 
-    const calculateTimeLeft = () => {
-        //let year = new Date().getFullYear(); 
-        let difference = +new Date(time) - +new Date();
+  const calculateTimeLeft = () => {
+    //let year = new Date().getFullYear(); 
+    let difference = +new Date(time) - +new Date();
 
-        let timeLeft = {};
+    let timeLeft = {};
 
-        if (difference > 0) {
-            timeLeft = {
-              Day: Math.floor(difference / (1000 * 60 * 60 * 24)),
-              Hrs: Math.floor((difference / (1000 * 60 * 60)) % 24),
-              Min: Math.floor((difference / 1000 / 60) % 60),
-              Sec: Math.floor((difference / 1000) % 60)
-            };
-          }
-
-          return timeLeft;
-
+    if (difference > 0) {
+      timeLeft = {
+        Day: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        Hrs: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        Min: Math.floor((difference / 1000 / 60) % 60),
+        Sec: Math.floor((difference / 1000) % 60)
+      };
     }
 
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    return timeLeft;
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-          setTimeLeft(calculateTimeLeft());
-        }, 1000);
-        return () => clearTimeout(timer);
-      });
+  }
 
-    const timerComponents = []
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-    Object.keys(timeLeft).forEach((interval) => {
-        if (!timeLeft[interval]) {
-          return;
-        }
-      
-        timerComponents.push(
-          <span>
-            {timeLeft[interval]} {interval}{" "}
-          </span>
-        );
-      });
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
+
+  const timerComponents = []
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <span>
+        {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
 
 
-      return (
-        <div className='countdown-box'>
-          {timerComponents.length ? <span className='countdown'>T- {timerComponents}</span> : <span>Time's up!</span>}
-       </div>  
-      )
+  return (
+    <div className='countdown-box'>
+      {timerComponents.length ? <span className='countdown'>T- {timerComponents}</span> : <span>Launched!</span>}
+    </div>
+  )
 }
 
 export default NextLaunchCountDown
