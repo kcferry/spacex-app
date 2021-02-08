@@ -1,41 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import Header from './components/Header'
 import NextLaunchMain from './components/NextLaunchMain'
-import LoadingPage from './components/LoadingPage'
+import Mars from './components/mars/Mars'
+import Roadster from './components/roadster/Roadster'
+import Starship from './components/starship/Starship'
 import './App.css'
-
-
-
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 
 const App = () => {
-  const [items, setItems] = useState([])
-  const [isLoading, setisLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchItems = async () => {
-      const result = await axios.get('https://api.spacexdata.com/v4/launches/next')
-      console.log(result.data)
-      setItems(result.data)
-      setisLoading(false)
-    }
-    fetchItems()
-  }, [])
 
 
   return (
     <>
-      <div className='container'>
-        <Header className='header' />
-      </div>
-
-
-      <section className='showcase'>
-        {isLoading ? <LoadingPage /> : <NextLaunchMain isLoading={isLoading} nextLaunchItems={items} />}
-      </section>
-
-
-
+      <Router>
+        <Header />
+        <Switch>
+          <Route path='/' exact component={NextLaunchMain} />
+          <Route path='/starship' component={Starship} />
+          <Route path='/roadster' component={Roadster} />
+          <Route path='/mars' component={Mars} />
+        </Switch>
+      </Router>
     </>
   );
 }

@@ -25,6 +25,7 @@
     list-style-type: none;
   }
 
+
   h1, 
   h2 {
     font-weight: 400;
@@ -60,6 +61,23 @@
   .navbar li {
     padding: 10px;
     margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar li:visited {
+    padding: 10px;
+    margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
   }
 
   .navbar li:hover {

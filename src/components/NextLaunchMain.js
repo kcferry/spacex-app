@@ -4,13 +4,27 @@ import falc9 from '../img/falcon-9-spacex-falcon-9-png-414_5414.png'
 import NextLaunchCountdown from '../components/NextLaunchCountdown'
 import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
+import LoadingPage from '../components/LoadingPage'
 import Rocket from './Rocket'
 import Webcast from './Webcast'
 import LaunchMap from './LaunchMap'
 
-const NextLaunchMain = ({ isLoading, nextLaunchItems }) => {
+const NextLaunchMain = () => {
 
+    const [nextLaunchItems, setnextLaunchitems] = useState([])
+    const [isLoading, setisLoading] = useState(true)
     const [launchPad, setLaunchPad] = useState([])
+
+    useEffect(() => {
+        const fetchItems = async () => {
+            const result = await axios.get('https://api.spacexdata.com/v4/launches/next')
+            console.log(result.data)
+            setnextLaunchitems(result.data)
+            setisLoading(false)
+        }
+        fetchItems()
+    }, [])
+
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -19,49 +33,55 @@ const NextLaunchMain = ({ isLoading, nextLaunchItems }) => {
         }
 
         fetchItems()
-    }, [])
+    }, [nextLaunchItems])
 
-    return isLoading ? (<h1>Loading...</h1>) : (<div className='container grid'>
 
-        <div className='countdown card'>
-            <NextLaunchCountdown time={nextLaunchItems.date_utc} />
-            <br />
-            <div className='stream'>
-                <button className='btn'>Live Stream</button>
-            </div>
-        </div>
+    return isLoading ? (<LoadingPage />) : (
 
-        <div className='info'>
-            <ul>
-                <li> <h1>{nextLaunchItems.name}</h1></li>
-                <Rocket rocketId={nextLaunchItems.rocket} />
-                <li>Flight No. {nextLaunchItems.flight_number}</li>
-                <Payload payloadId={nextLaunchItems.payloads} />
-                <li>
-                    <LaunchPad launchLocation={nextLaunchItems.launchpad} />
-                    <div className='leaflet-container'>
-                        <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
+        <section className='showcase'>
+            <div className='container grid'>
+
+                <div className='countdown card'>
+                    <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+                    <br />
+                    <div className='stream'>
+                        <button className='btn'>Live Stream</button>
                     </div>
-                </li>
-            </ul>
-        </div>
+                </div>
 
-        <div className='details card'>
-            <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
-            <img className='rocket-img' src={falc9} alt="Falcon 9" />
-            <p className='nl-details'> {nextLaunchItems.details}</p>
-        </div>
+                <div className='info'>
+                    <ul>
+                        <li> <h1>{nextLaunchItems.name}</h1></li>
+                        <Rocket rocketId={nextLaunchItems.rocket} />
+                        <li>Flight No. {nextLaunchItems.flight_number}</li>
+                        <Payload payloadId={nextLaunchItems.payloads} />
+                        <li>
+                            <LaunchPad launchLocation={nextLaunchItems.launchpad} />
+                            <div className='leaflet-container'>
+                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className='details card'>
+                    <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
+                    <img className='rocket-img' src={falc9} alt="Falcon 9" />
+                    <p className='nl-details'> {nextLaunchItems.details}</p>
+                </div>
 
 
 
 
 
 
-        <div className='webcast'>
-            <Webcast link={nextLaunchItems.links.youtube_id} />
-        </div>
+                <div className='webcast'>
+                    <Webcast link={nextLaunchItems.links.youtube_id} />
+                </div>
 
-    </div>
+            </div>
+
+        </section>
     )
 
 };
