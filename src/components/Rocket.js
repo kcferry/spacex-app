@@ -15,8 +15,6 @@ const Rocket = ({ rocketId }) => {
     fetchItems()
   }, [])
 
-  console.log(rocketId)
-
   return (
     <>
       <li>Rocket: {rocketItems.name}</li>

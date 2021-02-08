@@ -15,8 +15,6 @@ const LaunchPad = (launchLocation) => {
     fetchItems()
   }, [])
 
-  console.log(launchLocation)
-
   return (
     <div>
       <span>Launch Site:</span> {LaunchPadItems.full_name}
