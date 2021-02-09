@@ -12,7 +12,7 @@
   
   html,
   body {
-    background: #000 url('img/spacex--p-KCm6xB9I-unsplash.jpg');
+    background: url('img/spacex-6SbFGnQTE8s-unsplash.jpg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -85,7 +85,7 @@
   }
 
   .logo{
-    width: 25%;
+    width: 5%;
     margin: 0 5px;
   }
 
@@ -111,18 +111,27 @@
   }
 
   .showcase p {
-    margin: 20px 0;
+    margin-top: 20px;
   }
 
-  .stream {
-    font-weight: 400;
-    grid-column: 0 / 0;
-    grid-row: 1 /1;
+
+
+  .player-wrapper {
+    margin-top: 100px;
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .countdown {
     font-weight: 400;
     grid-column: 2 / 2;
+    grid-row: 1/1;
   }
 
   .details {
@@ -135,8 +144,8 @@
   }
 
   .info {
-    grid-column: 1 / 1
-    
+    grid-column: 1 / 1;
+    grid-row: 2 /2;
   }
 
   .badge-img {
@@ -148,17 +157,19 @@
   /* Utilities */
   .container {
     max-width: 1100px;
+    height: auto;
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
   }
 
   .card {
-    background: linear-gradient(to right bottom, rgba(129, 128, 128, 0.5), rgba(133, 129, 129, 0.3));
+    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.5), rgba(133, 129, 129, 0.3));
     backdrop-filter: blur(0.4rem);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 20px;
+    height: auto;
   }
 
   .btn {
@@ -178,7 +189,7 @@
     display: grid;
     grid-template-columns: 4fr 3fr;
     gap: 20px;
-    height: 100%;
+    height: auto;
   }
 
   
@@ -203,13 +214,13 @@
   }
 
   .info li:nth-child(even) {
-    background: linear-gradient(to right bottom, rgba(129, 128, 128, 0.5), rgba(133, 129, 129, 0.3));
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(35, 35, 36, 0.3));
     backdrop-filter: blur(0.4rem);
     border-radius: 0 8px 8px 0;
   }
 
   .info li:nth-child(odd) {
-    background: linear-gradient(to right bottom, rgba(65, 58, 126, 0.2), rgba(143, 140, 140, 0.3));
+    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.5), rgba(133, 129, 129, 0.3));
     backdrop-filter: blur(0.4rem);
     border-radius: 0 8px 8px 0;
   }

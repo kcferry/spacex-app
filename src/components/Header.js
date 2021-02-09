@@ -1,4 +1,4 @@
-import logo from '../img/1594px-SpaceX_Logo_Black.png'
+import logo from '../img/clover-297753_1280.png'
 import { Link } from 'react-router-dom'
 
 const Header = () => {

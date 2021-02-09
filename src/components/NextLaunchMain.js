@@ -6,6 +6,7 @@ import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
 import LoadingPage from '../components/LoadingPage'
 import Rocket from './Rocket'
+import { Link } from 'react-router-dom'
 import Webcast from './Webcast'
 import LaunchMap from './LaunchMap'
 
@@ -45,7 +46,9 @@ const NextLaunchMain = () => {
                     <NextLaunchCountdown time={nextLaunchItems.date_utc} />
                     <br />
                     <div className='stream'>
+                        <Link to='/live'>
                         <button className='btn'>Live Stream</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -68,15 +71,6 @@ const NextLaunchMain = () => {
                     <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
                     <img className='rocket-img' src={falc9} alt="Falcon 9" />
                     <p className='nl-details'> {nextLaunchItems.details}</p>
-                </div>
-
-
-
-
-
-
-                <div className='webcast'>
-                    <Webcast link={nextLaunchItems.links.youtube_id} />
                 </div>
 
             </div>

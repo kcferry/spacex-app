@@ -12,10 +12,10 @@ const NextLaunchCountDown = ({ time }) => {
 
     if (difference > 0) {
       timeLeft = {
-        Day: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        Hrs: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        Min: Math.floor((difference / 1000 / 60) % 60),
-        Sec: Math.floor((difference / 1000) % 60)
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hrs: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        min: Math.floor((difference / 1000 / 60) % 60),
+        sec: Math.floor((difference / 1000) % 60)
       };
     }
 
@@ -35,13 +35,11 @@ const NextLaunchCountDown = ({ time }) => {
   const timerComponents = []
 
   Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
-      return;
-    }
+
 
     timerComponents.push(
       <span>
-        {timeLeft[interval]} {interval}{" "}
+        {timeLeft[interval]}{interval}{" "}
       </span>
     );
   });

@@ -1,12 +1,28 @@
-import React from 'react'
+import ReactPlayer from 'react-player/youtube'
 
 const Webcast = ({ link }) => {
-    const stream = `https://www.youtube.com/embed/${link}?autoplay=1&mute=1&controls=1`
+    const last = 'fe6HBw1y6bA&t=928s'
+    const stream = `https://www.youtube.com/watch?v=${last}`
 
     return (
-        <iframe width="400" height="300"
-            src={stream}>
-        </iframe>
+        <div className='container'>
+            <div className="player-wrapper">
+                <ReactPlayer 
+                className='react-player'
+                url={stream}
+                    config={{
+                        youtube: {
+                            playerVars: {
+                                controls: true
+                            }
+                        }
+                    }}
+                width='100%'
+                height='100%'
+                />
+
+            </div>
+        </div>
     )
 }
 

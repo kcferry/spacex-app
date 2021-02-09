@@ -4,6 +4,7 @@ import NextLaunchMain from './components/NextLaunchMain'
 import Mars from './components/mars/Mars'
 import Roadster from './components/roadster/Roadster'
 import Starship from './components/starship/Starship'
+import Webcast from './components/Webcast'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 
@@ -16,6 +17,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route path='/' exact component={NextLaunchMain} />
+          <Route path='/live' component={Webcast} />
           <Route path='/starship' component={Starship} />
           <Route path='/roadster' component={Roadster} />
           <Route path='/mars' component={Mars} />
