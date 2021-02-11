@@ -25,6 +25,10 @@
     list-style-type: none;
   }
 
+  .wi {
+    font-size: 70px;
+    color: rgb(51, 143, 185);
+  }
 
   h1, 
   h2 {
@@ -152,6 +156,14 @@
     width: 40%;
   }
 
+  .clouds {
+    width: 30%
+  }
+
+  .sun {
+    width: 30%
+  }
+
 
 
   /* Utilities */
@@ -224,6 +236,8 @@
     backdrop-filter: blur(0.4rem);
     border-radius: 0 8px 8px 0;
   }
+
+
 
 
 

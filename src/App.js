@@ -6,6 +6,9 @@ import Roadster from './components/roadster/Roadster'
 import Starship from './components/starship/Starship'
 import Webcast from './components/Webcast'
 import './App.css'
+import 'weather-icons/css/weather-icons.css'
+import 'weather-icons/css/weather-icons-wind.css';
+
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 
 const App = () => {

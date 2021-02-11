@@ -7,14 +7,15 @@ import LaunchPad from '../components/LaunchPad'
 import LoadingPage from '../components/LoadingPage'
 import Rocket from './Rocket'
 import { Link } from 'react-router-dom'
-import Webcast from './Webcast'
 import LaunchMap from './LaunchMap'
+import Weather from './Weather'
 
 const NextLaunchMain = () => {
 
     const [nextLaunchItems, setnextLaunchitems] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [launchPad, setLaunchPad] = useState([])
+    const [weatherItems, setWeatherItems] = useState([])
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -32,9 +33,19 @@ const NextLaunchMain = () => {
             const result = await axios.get(`https://api.spacexdata.com/v4/launchpads/${nextLaunchItems.launchpad}`);
             setLaunchPad(result.data)
         }
-
         fetchItems()
     }, [nextLaunchItems])
+
+
+    useEffect(() => {
+        const fetchItems = async () => {
+          const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=c348c5ff03842e12c045da9197f47ae8`)
+          setWeatherItems(result.data)
+        }
+        fetchItems()
+      }, [launchPad])
+
+
 
 
     return isLoading ? (<LoadingPage />) : (
@@ -50,6 +61,10 @@ const NextLaunchMain = () => {
                         <button className='btn'>Live Stream</button>
                         </Link>
                     </div>
+                </div>
+
+                <div>
+                    <Weather forcast={weatherItems} />
                 </div>
 
                 <div className='info'>

@@ -8,7 +8,6 @@ const LaunchMap = ({latitude, longitude}) => {
     }
 
     const position = [latitude, longitude]
-    console.log(position)
 
     return (
         <MapContainer center={position} zoom={16} scrollWheelZoom={false}>

@@ -6,7 +6,9 @@ const Header = () => {
         <div className='container'>
             <div className='navbar'>
                 <div className='container flex'>
-                    <img className="logo" src={logo} alt="" />
+                    <Link to='/'>
+                        <img className="logo" src={logo} alt="" />
+                    </Link>
                     <nav>
                         <ul>
                             <Link to='/'>

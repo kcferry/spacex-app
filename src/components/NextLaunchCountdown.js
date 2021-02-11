@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-
-
 const NextLaunchCountDown = ({ time }) => {
-
   const calculateTimeLeft = () => {
     //let year = new Date().getFullYear(); 
     let difference = +new Date(time) - +new Date();
@@ -18,9 +15,7 @@ const NextLaunchCountDown = ({ time }) => {
         sec: Math.floor((difference / 1000) % 60)
       };
     }
-
     return timeLeft;
-
   }
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -36,7 +31,6 @@ const NextLaunchCountDown = ({ time }) => {
 
   Object.keys(timeLeft).forEach((interval) => {
 
-
     timerComponents.push(
       <span>
         {timeLeft[interval]}{interval}{" "}
@@ -44,10 +38,9 @@ const NextLaunchCountDown = ({ time }) => {
     );
   });
 
-
   return (
     <div className='countdown-box'>
-      {timerComponents.length ? <h2><span className='countdown'>T- {timerComponents}</span></h2> : <h3><span>Launched!</span></h3>} 
+      {timerComponents.length ? <h2><span className='countdown'>T- {timerComponents}</span></h2> : <h3><span>Launched!</span></h3>}
     </div>
   )
 }
