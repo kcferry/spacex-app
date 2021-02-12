@@ -42,7 +42,6 @@ const Weather = ({ forcast }) => {
     } else {
         return (null)
     }
-
 }
 
 export default Weather

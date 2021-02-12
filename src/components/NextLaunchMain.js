@@ -20,7 +20,6 @@ const NextLaunchMain = () => {
     useEffect(() => {
         const fetchItems = async () => {
             const result = await axios.get('https://api.spacexdata.com/v4/launches/next')
-            console.log(result.data)
             setnextLaunchitems(result.data)
             setisLoading(false)
         }
@@ -39,7 +38,7 @@ const NextLaunchMain = () => {
 
     useEffect(() => {
         const fetchItems = async () => {
-          const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=c348c5ff03842e12c045da9197f47ae8`)
+          const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`)
           setWeatherItems(result.data)
         }
         fetchItems()
@@ -49,7 +48,6 @@ const NextLaunchMain = () => {
 
 
     return isLoading ? (<LoadingPage />) : (
-
         <section className='showcase'>
             <div className='container grid'>
 
@@ -87,9 +85,7 @@ const NextLaunchMain = () => {
                     <img className='rocket-img' src={falc9} alt="Falcon 9" />
                     <p className='nl-details'> {nextLaunchItems.details}</p>
                 </div>
-
             </div>
-
         </section>
     )
 
