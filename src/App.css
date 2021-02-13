@@ -26,7 +26,7 @@
   }
 
   .wi {
-    font-size: 70px;
+    font-size: 50px;
     color: rgb(51, 143, 185);
   }
 
@@ -52,6 +52,7 @@
     backdrop-filter: blur(0.4rem);
     color: #fff;
     height: 70px;
+    margin-bottom: 20px;
   }
 
   .navbar .flex {
@@ -118,8 +119,6 @@
     margin-top: 20px;
   }
 
-
-
   .player-wrapper {
     margin-top: 100px;
     position: relative;
@@ -137,6 +136,24 @@
     grid-column: 2 / 2;
     grid-row: 1/1;
   }
+
+  .weather-box{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+
+  .weather-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weather-block p {
+    margin-top: 10px;
+  }
+
 
   .details {
     display: flex;
