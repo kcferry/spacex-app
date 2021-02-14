@@ -5,7 +5,7 @@ import Mars from './components/mars/Mars'
 import Roadster from './components/roadster/Roadster'
 import Starship from './components/starship/Starship'
 import Webcast from './components/Webcast'
-import './App.css'
+import './styles/styles.scss';
 import 'weather-icons/css/weather-icons.css'
 import 'weather-icons/css/weather-icons-wind.css';
 
