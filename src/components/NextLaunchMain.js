@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import falc9 from '../img/falcon-9-spacex-falcon-9-png-414_5414.png'
+import falc9crew from '../img/falcon-9-spacex-falcon-9-png-414_5414.png'
+import falc9fair from '../img/falc9Fairing.png'
+import falcHeavy from '../img/falconHeavy.png'
 import NextLaunchCountdown from '../components/NextLaunchCountdown'
 import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
@@ -82,7 +84,7 @@ const NextLaunchMain = () => {
 
                 <div className='details card'>
                     <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
-                    <img className='rocket-img' src={falc9} alt="Falcon 9" />
+                    <img className='rocket-img' src={falc9fair} alt="Falcon 9" />
                     <p className='nl-details'> {nextLaunchItems.details}</p>
                 </div>
             </div>

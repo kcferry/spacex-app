@@ -1,0 +1,49 @@
+.main-header {
+    background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgba(58, 57, 57,1)100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 80px;
+    //width: 100vw;
+    //padding: 0 10vw;
+    color: $blue;
+    z-index: 1;
+
+    .nav-logo{
+        justify-self: start;
+        margin-left: 20px;
+        width: 3%;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+    
+        .nav-link {
+    
+            .nav-li {
+                margin: .2rem;
+                padding: 1rem .5rem;
+            }
+            .nav-li:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    .menu-icon {
+        
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+}
