@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import logo from '../img/clover-297753_1280.png'
 import { Link } from 'react-router-dom'
-
+import { MenuItems } from './MenuItems'
 
 const Header = () => {
     const [clicked, setClicked] = useState(false)
 
     const handleClick = () => {
-        const onOff = clicked
-        setClicked(!onOff)
+        setClicked(!clicked)
     }
 
     return (
@@ -23,22 +22,16 @@ const Header = () => {
                 <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>
 
-            <ul className='nav-links'>
-                <Link className='nav-link' to='/'>
-                    <li className='nav-li'>Next Launch</li>
-                </Link>
-                <Link className='nav-link' to='/starship'>
-                    <li className='nav-li'>Starship</li>
-                </Link>
-                <Link className='nav-link' to='/roadster'>
-                    <li className='nav-li'>Starman</li>
-                </Link>
-                <Link className='nav-link' to='/mars'>
-                    <li className='nav-li'>Mars</li>
-                </Link>
+            <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+                {MenuItems.map((item, index) => {
+                    return (
+                        <li key={index} onClick={handleClick}><Link to={item.url} className={item.cName}>{item.title}</Link></li>
+                    )
+                })}
             </ul>
         </nav>
     )
 }
 
 export default Header
+
