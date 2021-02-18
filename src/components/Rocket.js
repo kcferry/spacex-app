@@ -17,7 +17,10 @@ const Rocket = ({ rocketId }) => {
 
   return (
     <>
-      <li>Rocket: {rocketItems.name}</li>
+      <tr>
+        <td><span className='title'>Rocket</span></td>
+        <td>{rocketItems.name}</td>
+      </tr>
     </>
   )
 };

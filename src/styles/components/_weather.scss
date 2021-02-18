@@ -1,0 +1,50 @@
+table, th, td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .wi {
+    font-size: 50px;
+    color: $blue;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  table {
+    border-spacing: 5px;
+  }
+
+  .weather-box{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+
+  .weather-icons-box{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .weather-icons-block{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .weather-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+  }

@@ -19,27 +19,44 @@ const Weather = ({ forcast }) => {
 
         const windGraphic = prefixWindP1 + prefixWindP2 + degrees + prefixWindP3
 
-console.log(forcast)
+        console.log(forcast)
 
         return (
-            <div className='card'>
-            <h3>Launch Complex Weather</h3> <br />
+            <div>
                 <div className="weather-box">
-                    <div className='weather-block'>
-                        <i className={graphic}></i>
-                        <p>{forcast.main.temp}&deg;</p>
+                    <div className='weather-icons-block'>
+                        <div className='weather-icons-box'>
+                            <div className='weather-block'>
+                                <i className={graphic}></i>
+                                <p>{forcast.main.temp}&deg;</p>
+                            </div>
+                            <div className='weather-block'>
+                                <i className={windGraphic}></i>
+                                <p>{forcast.wind.speed}kmh</p>
+                            </div>
+                        </div>
+                        <p>{forcast.weather[0].description}</p>
                     </div>
-                    <div className='weather-block'>
-                        <i className={windGraphic}></i>
-                        <p>{forcast.wind.speed}kmh</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Visibility: {forcast.visibility}</li>
-                            <li>Pressure: {forcast.main.pressure} hPa</li>
-                            <li>Humidity: {forcast.main.humidity} %</li>
 
-                        </ul>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><span className='title'>Cloud Coverage:</span></td>
+                                <td>{forcast.clouds.all} %</td>
+                            </tr>
+                            <tr>
+                                <td><span className='title'>Humidity:</span></td>
+                                <td>{forcast.main.humidity} %</td>
+                            </tr>
+                            <tr>
+                                <td><span className='title'>Pressure:</span></td>
+                                <td>{forcast.main.pressure} hPa</td>
+                            </tr>
+                            <tr>
+                                <td><span className='title'>Visibility:</span></td>
+                                <td>{forcast.visibility} Meters</td>
+                            </tr>
+                        </table>
                     </div>
 
                 </div>

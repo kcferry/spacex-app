@@ -17,13 +17,30 @@ const Payload = (payloadId) => {
 
   return (
     <>
-      <li>Payload: {payloadItems.name}</li>
-      <li>Payload Type: {payloadItems.type}</li>
-      <li>Customer: {payloadItems.customers}</li>
-      <li>Mass KG: {payloadItems.mass_kg}</li>
-      <li>Mass LB: {payloadItems.mass_lbs}</li>
-      <li>Orbit: {payloadItems.orbit}</li>
-      <li>Regime: {payloadItems.regime}</li>
+      <tr>
+        <td><span className='title'>Payload:</span></td>
+        <td>{payloadItems.name}</td>
+      </tr>
+      <tr>
+        <td><span className='title'>Payload Type:</span></td>
+        <td>{payloadItems.type}</td>
+      </tr>
+      <tr>
+        <td><span className='title'>Customer:</span></td>
+        <td>{payloadItems.customers}</td>
+      </tr>
+      <tr>
+        <td><span className='title'>Mass KG:</span></td>
+        <td>{payloadItems.mass_kg}kg</td>
+      </tr>
+      <tr>
+        <td><span className='title'>Orbit:</span></td>
+        <td>{payloadItems.orbit}</td>
+      </tr>
+      <tr>
+        <td><span className='title'>Regime:</span></td>
+        <td>{payloadItems.regime}</td>
+      </tr>
     </>
   )
 };

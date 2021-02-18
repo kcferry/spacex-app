@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 @import './base/settings';
 @import './base/base';
 @import './components/header';
 @import './components/Loading';
+@import './components/weather';
+@import './components/FlightInfo';
   
   :root {
     --primary-color: #fcfcfc80
@@ -22,10 +25,6 @@
     list-style-type: none;
   }
 
-  .wi {
-    font-size: 50px;
-    color: $blue;
-  }
 
   h1, 
   h2 {
@@ -42,50 +41,6 @@
     width: 100%;
   }
 
-  /* Navbar Styles*/
-
-  /*.navbar {
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(35, 35, 36, 0.3));
-    backdrop-filter: blur(0.4rem);
-    color: #fff;
-    height: 70px;
-    margin-bottom: 20px;
-  }
-
-  .navbar .flex {
-    justify-content: space-between;
-  } 
-
-  .navbar ul {
-    display: flex;
-  }
-
-  .navbar li {
-    padding: 10px;
-    margin: 0 5px;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .navbar li:visited {
-    padding: 10px;
-    margin: 0 5px;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  a:visited {
-    text-decoration: none;
-  }
-
-  .navbar li:hover {
-    border-bottom: 2px #fff solid;
-  }
-  */
 
   .logo{
     width: 5%;
@@ -136,24 +91,6 @@
     grid-row: 1/1;
   }
 
-  .weather-box{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-  }
-
-  .weather-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .weather-block p {
-    margin-top: 10px;
-  }
-
-
   .details {
     display: flex;
     flex-direction: column;
@@ -172,13 +109,6 @@
     width: 40%;
   }
 
-  .clouds {
-    width: 30%
-  }
-
-  .sun {
-    width: 30%
-  }
 
 
 

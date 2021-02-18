@@ -1,0 +1,21 @@
+.info-table{
+    width: 100%;
+}
+
+.info-table caption{
+    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.5), rgba(133, 129, 129, 0.3));
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0 8px 8px 0;
+}
+
+.info-table tr:nth-child(even) {
+    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(35, 35, 36, 0.3));
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0 8px 8px 0;
+  }
+
+.info-table tr:nth-child(odd) {
+    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.5), rgba(133, 129, 129, 0.3));
+    backdrop-filter: blur(0.4rem);
+    border-radius: 0 8px 8px 0;
+}

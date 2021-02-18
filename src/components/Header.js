@@ -25,7 +25,7 @@ const Header = () => {
             <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
                 {MenuItems.map((item, index) => {
                     return (
-                        <li key={index} onClick={handleClick}><Link to={item.url} className={item.cName}>{item.title}</Link></li>
+                        <li key={index} onClick={handleClick}><Link to={item.url} className={item.cName}><span className='title'>{item.title}</span></Link></li>
                     )
                 })}
             </ul>

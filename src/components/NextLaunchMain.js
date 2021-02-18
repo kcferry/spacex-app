@@ -40,11 +40,11 @@ const NextLaunchMain = () => {
 
     useEffect(() => {
         const fetchItems = async () => {
-          const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`)
-          setWeatherItems(result.data)
+            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`)
+            setWeatherItems(result.data)
         }
         fetchItems()
-      }, [launchPad])
+    }, [launchPad])
 
 
 
@@ -58,28 +58,28 @@ const NextLaunchMain = () => {
                     <br />
                     <div className='stream'>
                         <Link to='/live'>
-                        <button className='btn'>Live Stream</button>
+                            <button className='btn'>Live Stream</button>
                         </Link>
                     </div>
                 </div>
 
-                <div>
+                <div className='card'>
+                    <LaunchPad launchLocation={nextLaunchItems.launchpad} />
                     <Weather forcast={weatherItems} />
+                    <div className='leaflet-container'>
+                        <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
+                    </div>
                 </div>
 
                 <div className='info'>
-                    <ul>
-                        <li> <h1>{nextLaunchItems.name}</h1></li>
+                    <table className='info-table'>
                         <Rocket rocketId={nextLaunchItems.rocket} />
-                        <li>Flight No. {nextLaunchItems.flight_number}</li>
+                        <tr>
+                            <td><span className='title'>Flight No.</span></td>
+                            <td>{nextLaunchItems.flight_number}</td>
+                        </tr>
                         <Payload payloadId={nextLaunchItems.payloads} />
-                        <li>
-                            <LaunchPad launchLocation={nextLaunchItems.launchpad} />
-                            <div className='leaflet-container'>
-                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
-                            </div>
-                        </li>
-                    </ul>
+                    </table>
                 </div>
 
                 <div className='details card'>
