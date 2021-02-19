@@ -54,12 +54,24 @@ const NextLaunchMain = () => {
             <div className='container grid'>
 
                 <div className='countdown card'>
-                    <NextLaunchCountdown time={nextLaunchItems.date_utc} />
-                    <br />
-                    <div className='stream'>
-                        <Link to='/live'>
-                            <button className='btn'>Live Stream</button>
-                        </Link>
+                    <div className='count-grid'>
+
+                        <div className='mission-name-box'>
+                            <h1>{nextLaunchItems.name}</h1>
+                        </div>
+
+                        <div className='clock-box'>
+                            <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+                        </div>
+
+
+                        <div className='rocket-box'>
+                            <img className='rocket-img' src={falc9fair} alt="Falcon 9" />
+                        </div>
+
+                        <div className='stream-box'>
+                            {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Mission Details To Follow.</p>}
+                        </div>
                     </div>
                 </div>
 
@@ -84,8 +96,6 @@ const NextLaunchMain = () => {
 
                 <div className='details card'>
                     <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
-                    <img className='rocket-img' src={falc9fair} alt="Falcon 9" />
-                    <p className='nl-details'> {nextLaunchItems.details}</p>
                 </div>
             </div>
         </section>

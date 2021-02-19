@@ -28,14 +28,14 @@ const Weather = ({ forcast }) => {
                         <div className='weather-icons-box'>
                             <div className='weather-block'>
                                 <i className={graphic}></i>
-                                <p>{forcast.main.temp}&deg;</p>
+                                <p className='weather-icon-data'>{forcast.main.temp}&deg;</p>
                             </div>
                             <div className='weather-block'>
                                 <i className={windGraphic}></i>
-                                <p>{forcast.wind.speed}kmh</p>
+                                <p className='weather-icon-data'>{forcast.wind.speed}kmh</p>
                             </div>
                         </div>
-                        <p>{forcast.weather[0].description}</p>
+                        <p className='weather-description'>{forcast.weather[0].description}</p>
                     </div>
 
                     <div>

@@ -17,7 +17,8 @@ const LaunchPad = (launchLocation) => {
 
   return (
     <div>
-      <span className='title'>Launch Site:</span> {LaunchPadItems.full_name}
+      <span className='title'><h3>Launch Site</h3></span>
+      <p>{LaunchPadItems.full_name}</p> 
     </div>
   )
 };

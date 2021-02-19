@@ -6,6 +6,7 @@
 @import './components/Loading';
 @import './components/weather';
 @import './components/FlightInfo';
+@import './components/Countdown';
   
   :root {
     --primary-color: #fcfcfc80
@@ -48,18 +49,6 @@
   }
   
 
-  /* Loading */
-
-  .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .loading-gif {
-    width: 50%;
-    height: auto;
-  }
   
   /* Showcase */
 
@@ -67,10 +56,11 @@
     height: 100vh;
     color: #fff;
     position: relative;
+    margin-top: 20px;
   }
 
   .showcase p {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .player-wrapper {
@@ -85,11 +75,6 @@
     left: 0;
   }
 
-  .countdown {
-    font-weight: 400;
-    grid-column: 2 / 2;
-    grid-row: 1/1;
-  }
 
   .details {
     display: flex;
@@ -126,7 +111,7 @@
     backdrop-filter: blur(0.4rem);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: auto;
   }
 
@@ -155,23 +140,8 @@
     height: 200px;
   }
 
-  .rocket-img {
-    width: 5%;
-    z-index: 5;
-  }
-
   .info li {
     padding: 0.1rem;
   }
 
-  .info li:nth-child(even) {
-    background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(35, 35, 36, 0.3));
-    backdrop-filter: blur(0.4rem);
-    border-radius: 0 8px 8px 0;
-  }
-
-  .info li:nth-child(odd) {
-    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.5), rgba(133, 129, 129, 0.3));
-    backdrop-filter: blur(0.4rem);
-    border-radius: 0 8px 8px 0;
-  }
+ 
