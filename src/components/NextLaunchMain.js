@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import falc9crew from '../img/falcon-9-spacex-falcon-9-png-414_5414.png'
-import falc9fair from '../img/falc9Fairing.png'
-import falcHeavy from '../img/falconHeavy.png'
 import NextLaunchCountdown from '../components/NextLaunchCountdown'
 import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
 import LoadingPage from '../components/LoadingPage'
-import Rocket from './Rocket'
-import { Link } from 'react-router-dom'
+import RocketPic from './RocketPic'
 import LaunchMap from './LaunchMap'
 import Weather from './Weather'
 
@@ -17,6 +13,7 @@ const NextLaunchMain = () => {
     const [nextLaunchItems, setnextLaunchitems] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [launchPad, setLaunchPad] = useState([])
+    const [rocketItems, setRocketItems] = useState([])
     const [weatherItems, setWeatherItems] = useState([])
 
     useEffect(() => {
@@ -40,6 +37,15 @@ const NextLaunchMain = () => {
 
     useEffect(() => {
         const fetchItems = async () => {
+            const result = await axios.get(`https://api.spacexdata.com/v4/rockets/${nextLaunchItems.rocket}`)
+            setRocketItems(result.data)
+        }
+        fetchItems()
+    }, [nextLaunchItems])
+
+
+    useEffect(() => {
+        const fetchItems = async () => {
             const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`)
             setWeatherItems(result.data)
         }
@@ -54,24 +60,30 @@ const NextLaunchMain = () => {
             <div className='container grid'>
 
                 <div className='countdown card'>
-                    <div className='count-grid'>
+                    <div className='count-container'>
 
-                        <div className='mission-name-box'>
-                            <h1>{nextLaunchItems.name}</h1>
+                        <div className='count-left-container'>
+
+                            <div className='mission-name-box'>
+                                <h1>{nextLaunchItems.name}</h1>
+                            </div>
+
+                            <div className='clock-box'>
+                                <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+                            </div>
+
+                            <div className='stream-box'>
+                                {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in ducimus alias aut eligendi omnis enim asperiores! Suscipit tempore incidunt accusamus atque commodi cumque nihil optio, eligendi unde quam ipsam enim eos perspiciatis voluptatibus officia quod tenetur vel, dolorum porro.</p>}
+                            </div>
+
                         </div>
 
-                        <div className='clock-box'>
-                            <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+
+                        <div className='count-rocket-box'>
+                            <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads}/>
                         </div>
 
 
-                        <div className='rocket-box'>
-                            <img className='rocket-img' src={falc9fair} alt="Falcon 9" />
-                        </div>
-
-                        <div className='stream-box'>
-                            {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Mission Details To Follow.</p>}
-                        </div>
                     </div>
                 </div>
 
@@ -85,7 +97,10 @@ const NextLaunchMain = () => {
 
                 <div className='info'>
                     <table className='info-table'>
-                        <Rocket rocketId={nextLaunchItems.rocket} />
+                        <tr>
+                            <td><span className='title'>Rocket</span></td>
+                            <td>{rocketItems.name}</td>
+                        </tr>
                         <tr>
                             <td><span className='title'>Flight No.</span></td>
                             <td>{nextLaunchItems.flight_number}</td>
