@@ -53,8 +53,6 @@ const NextLaunchMain = () => {
     }, [launchPad])
 
 
-
-
     return isLoading ? (<LoadingPage />) : (
         <section className='showcase'>
             <div className='container grid'>
@@ -80,7 +78,7 @@ const NextLaunchMain = () => {
 
 
                         <div className='count-rocket-box'>
-                            <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads}/>
+                            <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads} />
                         </div>
 
 

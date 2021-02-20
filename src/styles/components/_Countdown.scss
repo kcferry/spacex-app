@@ -21,8 +21,6 @@
     width: 100%;
 }
 
-
-
 .mission-name-box {
     padding-bottom: 5px;
     border-bottom: $blue 2px solid;
@@ -32,7 +30,7 @@
     justify-self: center;
     align-self: center;
     color: #353d46;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     background-color: rgba($color: $green, $alpha: 1.0);
     border: $green 1px solid;
@@ -50,15 +48,14 @@
 
 .rocket-img {
     object-fit: fill;
-
     height: 520px;
     width: auto;
+    transition: all 5.5s ease-in;
 }
 
 
 
 .stream-box{
-    grid-area: stream-box;
     justify-self: center;
     margin: 20px;
     display: flex;

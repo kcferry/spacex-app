@@ -1,12 +1,14 @@
 .main-header {
-    background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgba(58, 57, 57,1)100%);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    top: 0;
     font-size: 1.2rem;
-    height: 60px;
+    min-height: 8.5vh;
+    background-color: black;
     color: $blue;
     z-index: 1;
+ 
 
     .nav-logo{
         justify-self: start;
@@ -56,6 +58,8 @@
         color: $blue;
         text-decoration: none;
         padding: 0.5rem 1rem;
+        letter-spacing: 3px;
+        font-size: 1.2rem;
     }
 
     .nav-links:hover {
@@ -76,9 +80,9 @@
         display: none;
     }
 
-    @media screen and (max-width: 920px) {
+    @media screen and (max-width: 1130px) {
         .main-header{
-            position: relative;
+            position: fixed;
         }
 
         .nav-menu{
@@ -94,11 +98,13 @@
         }
 
         .nav-menu.active {
-            background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgba(58, 57, 57,1)100%);
+            background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgb(0, 0, 0)100%);
             left: 0;
             opacity: 1;
+            height: 110%;
             transition: all 0.5s ease;
             z-index: 6;
+            position: absolute;
         }
 
         .nav-links{
@@ -114,20 +120,22 @@
         }
 
         .nav-logo {
-            position: absolute;
+            position: fixed;
             top: 0;
-            left: 0;
-            transform: translate(25%, 25%);
+            left: auto;
+            transform: translate(0, 25%);
+            z-index: 10;
         }
 
         .menu-icon {
             display: block;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
-            transform: translate(-100%, 60%);
+            transform: translate(-100%, 100%);
             font-size: 1.8rem;
             cursor: pointer;
+            z-index: 10;
         }
 
         .fa-times {

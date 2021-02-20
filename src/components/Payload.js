@@ -4,13 +4,11 @@ import axios from 'axios'
 const Payload = (payloadId) => {
 
   const [payloadItems, setPayloadItems] = useState([])
-  const [isLoading, setisLoading] = useState(true)
 
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios.get(`https://api.spacexdata.com/v4/payloads/${payloadId.payloadId[0]}`)
       setPayloadItems(result.data)
-      setisLoading(false)
     }
     fetchItems()
   }, [])
