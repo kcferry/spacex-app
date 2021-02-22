@@ -11,25 +11,28 @@ const Header = () => {
     }
 
     return (
-        <nav className='main-header'>
-            <div className='nav-logo'>
-                <Link to='/'>
-                    <img src={logo} alt="" />
-                </Link>
-            </div>
+        <header>
+            <nav>
+                <div className='nav-logo'>
+                    <Link to='/'>
+                        <img src={logo} alt="" />
+                    </Link>
+                </div>
 
-            <div className='menu-icon' onClick={handleClick} >
-                <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-            </div>
+                <div className='menu-icon' onClick={handleClick} >
+                    <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                </div>
 
-            <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
-                {MenuItems.map((item, index) => {
-                    return (
-                        <li key={index} onClick={handleClick}><Link to={item.url} className={item.cName}><span className='title'>{item.title}</span></Link></li>
-                    )
-                })}
-            </ul>
-        </nav>
+                <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+                    {MenuItems.map((item, index) => {
+                        return (
+                            <li key={index} onClick={handleClick}><Link to={item.url} className={item.cName}><span className='title'>{item.title}</span></Link></li>
+                        )
+                    })}
+                </ul>
+            </nav>
+
+        </header>
     )
 }
 

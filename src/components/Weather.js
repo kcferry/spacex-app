@@ -19,8 +19,6 @@ const Weather = ({ forcast }) => {
 
         const windGraphic = prefixWindP1 + prefixWindP2 + degrees + prefixWindP3
 
-        console.log(forcast)
-
         return (
             <div>
                 <div className="weather-box">

@@ -7,6 +7,9 @@ import LoadingPage from '../components/LoadingPage'
 import RocketPic from './RocketPic'
 import LaunchMap from './LaunchMap'
 import Weather from './Weather'
+import Header from './Header'
+import Footer from './Footer'
+
 
 const NextLaunchMain = () => {
 
@@ -54,64 +57,65 @@ const NextLaunchMain = () => {
 
 
     return isLoading ? (<LoadingPage />) : (
-        <section className='showcase'>
-            <div className='container grid'>
+        <>
+            <section className='showcase'>
+                <div className='container grid'>
 
-                <div className='countdown card'>
-                    <div className='count-container'>
+                    <div className='countdown card'>
+                        <div className='count-container'>
+                            <div className='count-left-container'>
 
-                        <div className='count-left-container'>
+                                <div className='mission-name-box'>
+                                    <h1>{nextLaunchItems.name}</h1>
+                                </div>
 
-                            <div className='mission-name-box'>
-                                <h1>{nextLaunchItems.name}</h1>
+                                <div className='clock-box'>
+                                    <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+                                </div>
+                                <div className='stream-box'>
+                                    {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Mission Details Coming Soon.</p>}
+                                </div>
                             </div>
 
-                            <div className='clock-box'>
-                                <NextLaunchCountdown time={nextLaunchItems.date_utc} />
-                            </div>
-
-                            <div className='stream-box'>
-                                {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in ducimus alias aut eligendi omnis enim asperiores! Suscipit tempore incidunt accusamus atque commodi cumque nihil optio, eligendi unde quam ipsam enim eos perspiciatis voluptatibus officia quod tenetur vel, dolorum porro.</p>}
+                            <div className='count-rocket-box'>
+                                <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads} />
                             </div>
 
                         </div>
+                    </div>
 
-
-                        <div className='count-rocket-box'>
-                            <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads} />
+                    <div className='card'>
+                        <LaunchPad launchLocation={nextLaunchItems.launchpad} />
+                        <Weather forcast={weatherItems} />
+                        <div className='map'>
+                            <div className='leaflet-container'>
+                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
+                            </div>
                         </div>
-
-
                     </div>
-                </div>
 
-                <div className='card'>
-                    <LaunchPad launchLocation={nextLaunchItems.launchpad} />
-                    <Weather forcast={weatherItems} />
-                    <div className='leaflet-container'>
-                        <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
+                    <div className='info'>
+                        <table className='info-table'>
+                            <tr>
+                                <td><span className='title'>Rocket</span></td>
+                                <td>{rocketItems.name}</td>
+                            </tr>
+                            <tr>
+                                <td><span className='title'>Flight No.</span></td>
+                                <td>{nextLaunchItems.flight_number}</td>
+                            </tr>
+                            <Payload payloadId={nextLaunchItems.payloads} />
+                        </table>
                     </div>
-                </div>
 
-                <div className='info'>
-                    <table className='info-table'>
-                        <tr>
-                            <td><span className='title'>Rocket</span></td>
-                            <td>{rocketItems.name}</td>
-                        </tr>
-                        <tr>
-                            <td><span className='title'>Flight No.</span></td>
-                            <td>{nextLaunchItems.flight_number}</td>
-                        </tr>
-                        <Payload payloadId={nextLaunchItems.payloads} />
-                    </table>
-                </div>
+                    <div className='details card'>
+                        <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
+                    </div>
 
-                <div className='details card'>
-                    <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
+                    <Footer />
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 
 };

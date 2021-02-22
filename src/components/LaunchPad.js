@@ -4,20 +4,18 @@ import axios from 'axios'
 const LaunchPad = (launchLocation) => {
 
   const [LaunchPadItems, setLaunchPadItems] = useState([])
-  const [isLoading, setisLoading] = useState(true)
 
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios.get(`https://api.spacexdata.com/v4/launchpads/${launchLocation.launchLocation}`);
       setLaunchPadItems(result.data)
-      setisLoading(false)
     }
     fetchItems()
   }, [])
 
   return (
-    <div>
-      <span className='title'><h3>Launch Site</h3></span>
+    <div className='launch-site'>
+      <h3 className='title launch-title'>Launch Site</h3>
       <p>{LaunchPadItems.full_name}</p> 
     </div>
   )
