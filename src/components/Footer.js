@@ -2,25 +2,21 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='footer-links'>
+        <footer>
+
             <ul className='footer-menu'>
                 <li>
-                    <div className='footer-link'>
-                        <a href="#"> <i class="fab fa-linkedin"></i></a>
-                    </div>
+                        <a className='footer-links' href="https://www.linkedin.com/in/kyle-ferry-2bb160112/"> <i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <div className='footer-link'>
-                        <a href="#"> <i class="fab fa-twitter"></i></a>
-                    </div>
+                        <a className='footer-links' href="https://twitter.com/Kvferry"> <i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
-                    <div className='footer-link'>
-                        <a href="#"> <i class="fab fa-github"></i></a>
-                    </div>
+                        <a className='footer-links' href="https://github.com/kcferry"> <i class="fab fa-github"></i></a>
                 </li>
             </ul>
-        </div>
+
+        </footer>
     )
 }
 

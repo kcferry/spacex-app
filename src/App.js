@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Header />
+
         <Switch>
           <Route path='/' exact component={NextLaunchMain} />
           <Route path='/live' component={Webcast} />
@@ -26,6 +26,7 @@ const App = () => {
           <Route path='/roadster' component={Roadster} />
           <Route path='/mars' component={Mars} />
         </Switch>
+
       </Router>
     </>
   );

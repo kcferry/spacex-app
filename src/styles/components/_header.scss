@@ -23,22 +23,6 @@ nav {
         text-transform: uppercase;
     }
 
-    .nav-links {
-        display: flex;
-        list-style: none;
-    
-        .nav-link {
-    
-            .nav-li {
-                margin: .2rem;
-                padding: 1rem .5rem;
-            }
-            .nav-li:hover {
-                background: rgba(255, 255, 255, 0.2);
-            }
-        }
-    }
-
     .menu-btn {
         display: none;
     }

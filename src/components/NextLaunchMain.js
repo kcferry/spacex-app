@@ -58,7 +58,9 @@ const NextLaunchMain = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
+            <Header />
             <section className='showcase'>
+
                 <div className='container grid'>
 
                     <div className='countdown card'>
@@ -111,9 +113,8 @@ const NextLaunchMain = () => {
                     <div className='details card'>
                         <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
                     </div>
-
-                    <Footer />
                 </div>
+                <Footer />
             </section>
         </>
     )

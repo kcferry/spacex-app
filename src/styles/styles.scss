@@ -7,6 +7,7 @@
 @import './components/weather';
 @import './components/FlightInfo';
 @import './components/Countdown';
+@import './components/Footer';
   
   :root {
     --primary-color: #fcfcfc80
@@ -37,11 +38,13 @@
   
   /* Showcase */
   .showcase {
+    position: relative;
     background-size: cover;
     height: 100vh;
     color: #fff;
     position: relative;
     margin-top: 20px;
+
   }
 
 
@@ -75,7 +78,7 @@
   .container {
     max-width: 1100px;
     height: auto;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 0 40px;
   }
 
