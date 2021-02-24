@@ -24,10 +24,4 @@ export const MenuItems = [
         url: '/mars',
         cName: 'nav-links'
     },
-    {
-        title: 'Live Stream',
-        url: '/live',
-        cName: 'nav-links'
-    }
-
 ]

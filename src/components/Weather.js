@@ -52,7 +52,7 @@ const Weather = ({ forcast }) => {
                             </tr>
                             <tr>
                                 <td><span className='title'>Visibility:</span></td>
-                                <td>{forcast.visibility} Meters</td>
+                                <td>{Math.round((forcast.visibility / 1000) * 10) / 10} km</td>
                             </tr>
                         </table>
                     </div>

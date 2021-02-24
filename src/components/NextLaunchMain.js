@@ -9,6 +9,7 @@ import LaunchMap from './LaunchMap'
 import Weather from './Weather'
 import Header from './Header'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 
 const NextLaunchMain = () => {
@@ -75,8 +76,15 @@ const NextLaunchMain = () => {
                                     <NextLaunchCountdown time={nextLaunchItems.date_utc} />
                                 </div>
                                 <div className='stream-box'>
-                                    {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p>Mission Details Coming Soon.</p>}
+                                    {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p className='nl-details'>Mission Details Coming Soon.</p>}
                                 </div>
+
+                                <Link to='/live'>
+                                    <div class="btn">
+                                        <a className='title'><span className='btn-text'>LIVE STREAM</span></a>
+                                    </div>
+                                </Link>
+
                             </div>
 
                             <div className='count-rocket-box'>
