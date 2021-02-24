@@ -8,6 +8,7 @@
 @import './components/FlightInfo';
 @import './components/Countdown';
 @import './components/Footer';
+@import './components/LandingPage';
   
   :root {
     --primary-color: #fcfcfc80
@@ -22,6 +23,7 @@
     overflow: scroll;
     line-height: 1.6rem;
     color: #333;
+    padding: env(safe-area-inset);
   }
 
   h1, 
@@ -34,7 +36,6 @@
   img {
     width: 100%;
   }
-
   
   /* Showcase */
   .showcase {
@@ -44,7 +45,6 @@
     color: #fff;
     position: relative;
     margin-top: 20px;
-
   }
 
 
@@ -73,12 +73,11 @@
     width: 40%;
   }
 
-
   /* Utilities */
   .container {
     max-width: 1100px;
     height: auto;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 0 40px;
   }
 
@@ -89,6 +88,7 @@
     padding: 20px;
     margin-bottom: 10px;
     height: auto;
+    box-shadow: 2px 3px rgba($color: #0a0909, $alpha: 0.3);
   }
 
   .flex {
@@ -111,19 +111,25 @@
     }
   }
 
-
-
   @media screen and (max-width: 700px) {
     .grid {
       grid-template-columns: 1fr;
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     .grid {
       grid-template-columns: 1fr;
       padding: 0;
       overflow: hidden;
+    }
+
+    .card {
+      padding: 5px;
+    }
+
+    .container {
+      margin: 10px auto;
     }
   }
   

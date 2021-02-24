@@ -1,9 +1,39 @@
+import Header from './Header'
+import { Link } from 'react-router-dom'
+import vid from '../img/landingVid.mp4'
+import logo from '../img/clover-297753_1280.png'
+
+
 
 const LandingPage = () => {
+
+
+
     return (
-        <div>
-            <h1>Landing page</h1>
-        </div>
+        <>
+            <div className='full-screen-video-container'>
+
+                <video muted loop playsInline autoPlay>
+                    <source src={vid} type='video/mp4' />
+                </video>
+
+                <div className='full-screen-video-content'>
+
+                    <img src={logo} alt="" />
+
+
+                    <Link to='/next-launch'>
+                        <div class="btn">
+                            <a className='title'><span className='btn-text'>Launch</span></a>
+                        </div>
+                    </Link>
+
+
+                </div>
+
+            </div>
+
+        </>
     )
 }
 

@@ -9,3 +9,20 @@
     font-family: 'Exo 2', sans-serif;
     color: $blue;
   }
+
+  
+.btn {
+  border: $blue 3px solid;
+  padding: 10px 30px;
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+.btn-text {
+  text-decoration: none;
+}

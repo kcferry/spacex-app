@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-import Header from './components/Header'
 import NextLaunchMain from './components/NextLaunchMain'
 import Mars from './components/mars/Mars'
 import Roadster from './components/roadster/Roadster'
@@ -9,6 +7,7 @@ import './styles/styles.scss';
 import 'weather-icons/css/weather-icons.css'
 import 'weather-icons/css/weather-icons-wind.css';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
+import LandingPage from './components/LandingPage'
 
 
 
@@ -20,7 +19,8 @@ const App = () => {
       <Router>
 
         <Switch>
-          <Route path='/' exact component={NextLaunchMain} />
+          <Route path='/' exact component={LandingPage} />
+          <Route path='/next-launch' component={NextLaunchMain} />
           <Route path='/live' component={Webcast} />
           <Route path='/starship' component={Starship} />
           <Route path='/roadster' component={Roadster} />
