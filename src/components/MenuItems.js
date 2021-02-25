@@ -1,27 +1,27 @@
 export const MenuItems = [
     {
         title: 'NEXT LAUNCH',
-        url: '/',
+        url: '/next-launch',
         cName: 'nav-links'
     },
     {
         title: 'FALCON 9',
-        url: '/starship',
+        url: '/falcon-9',
         cName: 'nav-links'
     },
     {
         title: 'FALCON HEAVY',
-        url: '/roadster',
+        url: '/falcon-heavy',
         cName: 'nav-links'
     },
     {
         title: 'DRAGON',
-        url: '/mars',
+        url: '/dragon',
         cName: 'nav-links'
     },
     {
         title: 'STARSHIP',
-        url: '/mars',
+        url: '/starship',
         cName: 'nav-links'
     },
 ]

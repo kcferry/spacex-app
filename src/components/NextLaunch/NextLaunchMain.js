@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReactPlayer from 'react-player/youtube'
 
-import NextLaunchCountdown from '../components/NextLaunchCountdown'
-import Payload from '../components/Payload'
-import LaunchPad from '../components/LaunchPad'
-import LoadingPage from '../components/LoadingPage'
+import NextLaunchCountdown from './NextLaunchCountdown'
+import Payload from './Payload'
+import LaunchPad from './LaunchPad'
+import LoadingPage from '../LoadingPage'
 import RocketPic from './RocketPic'
 import LaunchMap from './LaunchMap'
-import Modal from './Modal'
+import Modal from '../Modal'
 import Weather from './Weather'
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../Header'
+import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
 
@@ -130,8 +130,8 @@ const NextLaunchMain = () => {
                         <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
                     </div>
                 </div>
-                <Footer />
             </section>
+            <Footer />
         </>
     )
 

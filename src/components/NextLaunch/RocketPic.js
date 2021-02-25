@@ -1,7 +1,7 @@
 import React from 'react'
-import falc9crew from '../img/falcon-9-spacex-falcon-9-png-414_5414.png'
-import falc9fair from '../img/falc9Fairing.png'
-import falcHeavy from '../img/falconHeavy.png'
+import falc9crew from '../../img/falcon-9-spacex-falcon-9-png-414_5414.png'
+import falc9fair from '../../img/falc9Fairing.png'
+import falcHeavy from '../../img/falconHeavy.png'
 
 const RocketPic = ({ rocketItems, payloadItems }) => {
     const isDragon = payloadItems.dragon

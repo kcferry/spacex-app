@@ -1,4 +1,4 @@
-import weatherIcons from '../utilites/weatherIcons.json'
+import weatherIcons from '../../utilites/weatherIcons.json'
 
 const Weather = ({ forcast }) => {
 
