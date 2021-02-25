@@ -2,7 +2,6 @@ import NextLaunchMain from './components/NextLaunchMain'
 import Mars from './components/mars/Mars'
 import Roadster from './components/roadster/Roadster'
 import Starship from './components/starship/Starship'
-import Webcast from './components/Webcast'
 import './styles/styles.scss';
 import 'weather-icons/css/weather-icons.css'
 import 'weather-icons/css/weather-icons-wind.css';
@@ -21,7 +20,6 @@ const App = () => {
         <Switch>
           <Route path='/' exact component={LandingPage} />
           <Route path='/next-launch' component={NextLaunchMain} />
-          <Route path='/live' component={Webcast} />
           <Route path='/starship' component={Starship} />
           <Route path='/roadster' component={Roadster} />
           <Route path='/mars' component={Mars} />

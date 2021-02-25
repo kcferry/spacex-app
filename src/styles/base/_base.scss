@@ -23,6 +23,16 @@ a {
   color: $blue;
 }
 
+button {
+    background: none;
+    border: $blue 3px solid;
+    padding: 10px 30px;
+    border-radius:  5px;
+    text-decoration: none;
+    color: $blue;
+    cursor: pointer;
+}
+
 .btn-text {
   text-decoration: none;
   letter-spacing: 0.1rem;

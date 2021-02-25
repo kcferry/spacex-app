@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import ReactPlayer from 'react-player/youtube'
+
 import NextLaunchCountdown from '../components/NextLaunchCountdown'
 import Payload from '../components/Payload'
 import LaunchPad from '../components/LaunchPad'
 import LoadingPage from '../components/LoadingPage'
 import RocketPic from './RocketPic'
 import LaunchMap from './LaunchMap'
+import Modal from './Modal'
 import Weather from './Weather'
 import Header from './Header'
 import Footer from './Footer'
@@ -19,6 +22,7 @@ const NextLaunchMain = () => {
     const [launchPad, setLaunchPad] = useState([])
     const [rocketItems, setRocketItems] = useState([])
     const [weatherItems, setWeatherItems] = useState([])
+    const [isOpen, setisOpen] = useState(false)
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -56,6 +60,10 @@ const NextLaunchMain = () => {
         fetchItems()
     }, [launchPad])
 
+    const last = 'fe6HBw1y6bA&t=928s'
+    const stream = `https://www.youtube.com/watch?v=${last}`
+
+
 
     return isLoading ? (<LoadingPage />) : (
         <>
@@ -79,11 +87,11 @@ const NextLaunchMain = () => {
                                     {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p className='nl-details'>Mission Details Coming Soon.</p>}
                                 </div>
 
-                                <Link to='/live'>
-                                    <div class="btn">
-                                        <a className='title'><span className='btn-text'>LIVE STREAM</span></a>
-                                    </div>
-                                </Link>
+
+                                <div className="stream-modal">
+                                    <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>LIVE STREAM</span></button>
+                                    <Modal link={nextLaunchItems.links.youtube_id} open={isOpen} onClose={() => setisOpen(false)} />
+                                </div>
 
                             </div>
 

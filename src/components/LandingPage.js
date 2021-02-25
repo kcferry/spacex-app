@@ -1,4 +1,3 @@
-import Header from './Header'
 import { Link } from 'react-router-dom'
 import vid from '../img/landingVid.mp4'
 import logo from '../img/clover-297753_1280.png'
