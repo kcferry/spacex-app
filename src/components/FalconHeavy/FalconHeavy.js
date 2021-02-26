@@ -7,15 +7,19 @@ import falcHeavy from '../../img/falconHeavy.png'
 const FalconHeavy = () => {
     return (
         <>
-        <Header />
-        <section className='showcase'>
-            <div className='container grid'>
-                <h1>falcon Heavy</h1>
-                <img className='rocket-img' src={falcHeavy} alt="Falcon 9" />
-            </div>
-        </section>
-        <Footer />
-    </>
+            <Header />
+            <section className='showcase-vehicle'>
+                <div className='container-vehicle-flex'>
+                    <div className='vechicle-info-box'>
+                        <h1>FALCON HEAVY</h1>
+                    </div>
+                    <div className='vechicle-img-box'>
+                        <img className='rock-img' src={falcHeavy} alt="Falcon 9" />
+                    </div>
+                </div>
+            </section>
+            <Footer />
+        </>
     )
 }
 

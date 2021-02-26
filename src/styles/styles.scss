@@ -10,6 +10,7 @@
 @import './components/Footer';
 @import './components/LandingPage';
 @import './components/Modal';
+@import './components/Dragon/Dragon-Page-Main';
   
   :root {
     --primary-color: #fcfcfc80
@@ -90,6 +91,9 @@
     grid-template-columns: 4fr 3fr;
     gap: 20px;
     height: auto;
+    justify-content: center; 
+    align-items: stretch;
+    align-content: start;
   }
   
   @media screen and (max-width: 920px) {

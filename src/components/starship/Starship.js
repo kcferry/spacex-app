@@ -6,10 +6,14 @@ const Starship = () => {
     return (
         <>
             <Header />
-            <section className='showcase'>
-                <div className='container grid'>
-                    <h1>Starship</h1>
-                    <img className='rocket-img' src={starship} alt="Falcon 9" />
+            <section className='showcase-vehicle'>
+                <div className='container-vehicle-flex'>
+                    <div className='vechicle-info-box'>
+                        <h1>STARSHIP</h1>
+                    </div>
+                    <div className='vechicle-img-box'>
+                        <img className='rock-img' src={starship} alt="Falcon 9" />
+                    </div>
                 </div>
             </section>
             <Footer />

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactPlayer from 'react-player/youtube'
 
 import NextLaunchCountdown from './NextLaunchCountdown'
 import Payload from './Payload'
@@ -12,7 +11,6 @@ import Modal from '../Modal'
 import Weather from './Weather'
 import Header from '../Header'
 import Footer from '../Footer'
-import { Link } from 'react-router-dom'
 
 
 const NextLaunchMain = () => {
