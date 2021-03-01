@@ -29,12 +29,16 @@ const FalconHeavy = () => {
             <section className='showcase-vehicle'>
                 <div className='container-vehicle-grid'>
 
+                <div className='vechicle-description-box card'>
+                            <h1 className='vechicle-name title'>FALCON HEAVY</h1>
+                            <p className='nl-details'>{falcHeavyInfo.description}</p>
+                        </div>
+
 
                     <div className='vechicle-info-box'>
 
                         <div className='vechicle-stats-box card'>
                             <table>
-                                <th> <h1 className='title'>Falcon Heavy</h1> </th>
                                 <tr>
                                     <td><span className='title'>FIRST FLIGHT</span></td>
                                     <td>{falcHeavyInfo.first_flight}</td>
@@ -68,7 +72,7 @@ const FalconHeavy = () => {
 
                         <div className="stream-modal">
                             <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
-                            <Modal link={"F-wBgsf8jWY"} open={isOpen} onClose={() => setisOpen(false)} />
+                            <Modal link={"wbSwFU6tY1c"} open={isOpen} onClose={() => setisOpen(false)} />
                         </div>
                     </div>
 

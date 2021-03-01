@@ -22,7 +22,7 @@ const Falcon9 = () => {
         fetchItems()
     }, [])
 
-    
+
 
 
     return isLoading ? (<LoadingPage />) : (
@@ -31,12 +31,16 @@ const Falcon9 = () => {
             <section className='showcase-vehicle'>
                 <div className='container-vehicle-grid'>
 
+                    <div className='vechicle-description-box card'>
+                        <h1 className='vechicle-name title'>FALCON 9</h1>
+                        <p className='nl-details'>{falc9Info.description}</p>
+                    </div>
+
 
                     <div className='vechicle-info-box'>
 
                         <div className='vechicle-stats-box card'>
                             <table>
-                                <th> <h1 className='title'>Falcon 9</h1> </th>
                                 <tr>
                                     <td><span className='title'>FIRST FLIGHT</span></td>
                                     <td>{falc9Info.first_flight}</td>
@@ -58,8 +62,8 @@ const Falcon9 = () => {
                                     <td>{falc9Info.diameter.meters}</td>
                                 </tr>
 
-                                
-                                
+
+
 
 
                             </table>
@@ -75,7 +79,7 @@ const Falcon9 = () => {
 
                         <div className="stream-modal">
                             <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
-                            <Modal link={"F-wBgsf8jWY"} open={isOpen} onClose={() => setisOpen(false)} />
+                            <Modal link={"nxSxgBKlYws"} open={isOpen} onClose={() => setisOpen(false)} />
                         </div>
                     </div>
 

@@ -12,6 +12,10 @@
     letter-spacing: 3px;
   }
 
+  .description-text {
+    text-align: center;
+  }
+
   
 .btn {
   border: $blue 3px solid;
@@ -26,7 +30,7 @@ a {
 }
 
 button {
-    background: none;
+    background: rgba($color: #000000, $alpha: 0.6);
     border: $blue 3px solid;
     padding: 10px 30px;
     border-radius:  5px;
