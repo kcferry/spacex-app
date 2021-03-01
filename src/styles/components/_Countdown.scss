@@ -33,11 +33,35 @@
     color: #353d46;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
-    background-color: rgba($color: $green, $alpha: 1.0);
-    border: $green 1px solid;
+    background-color: rgba($color: rgb(31, 29, 29), $alpha: 1.0);
+    border: $green 3px solid;
     border-radius: 4px;
     transition: all 0.3s ease-out;
 }
+
+.clock-box-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 30px;
+    align-content: center;
+    padding: 5px 25px;
+}
+
+.clock-font {
+    font-size: 0.8rem;
+    color: rgb(139, 138, 138);
+    
+}
+
+.clock-font-time {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
 
 .count-rocket-box {
     display: flex;

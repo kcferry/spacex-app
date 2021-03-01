@@ -19,7 +19,7 @@ const Modal = ({ open, onClose, link }) => {
             <div className='modal-stlyes'>
                 
                 <div className='modal-content'>
-                <button onClick={onClose}>X</button>
+                <button className='modal-close-btn' onClick={onClose}>X</button>
                     <div className="player-wrapper">
                         <iframe
                             width="560" height="315"

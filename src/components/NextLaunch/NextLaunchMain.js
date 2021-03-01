@@ -81,6 +81,7 @@ const NextLaunchMain = () => {
                                 <div className='clock-box'>
                                     <NextLaunchCountdown time={nextLaunchItems.date_utc} />
                                 </div>
+                                
                                 <div className='stream-box'>
                                     {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p className='nl-details'>Mission Details Coming Soon.</p>}
                                 </div>
