@@ -8,7 +8,6 @@ const Modal = ({ open, onClose, link }) => {
         return null
     }
     
-    
     const stream = `https://www.youtube.com/embed/${link}`
 
     return ReactDom.createPortal(
