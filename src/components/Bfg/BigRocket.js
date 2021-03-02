@@ -5,9 +5,9 @@ import Footer from '../Footer'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
 
-import starship from '../../img/SS.png'
+import starshipimg from '../../img/SS.png'
 
-const Starship = () => {
+const BigRocket = () => {
     const [starshipInfo, setstarshipInfo] = useState([])
     const [isLoading, setisLoading] = useState(true)
     const [isOpen, setisOpen] = useState(false)
@@ -81,8 +81,7 @@ const Starship = () => {
 
 
                     <div className='vechicle-img-box'>
-                        <img className='rocket-page-img' src={starship} alt="Falcon 9" />
-
+                        <img className='rocket-page-img' src={starshipimg} alt="Star ship" />
                     </div>
 
 
@@ -93,4 +92,4 @@ const Starship = () => {
     )
 }
 
-export default Starship
+export default BigRocket
