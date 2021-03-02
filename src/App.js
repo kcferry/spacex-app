@@ -2,7 +2,7 @@ import NextLaunchMain from './components/NextLaunch/NextLaunchMain';
 import Dragon from './components/Dragon/Dragon';
 import FalconHeavy from './components/FalconHeavy/FalconHeavy';
 import Falcon9 from './components/Falcon9/Falcon9';
-import BigRocket from './components/Bfg/BigRocket''
+import BigRocket from './components/Bfg/BigRocket'
 import './styles/styles.scss';
 import 'weather-icons/css/weather-icons.css';
 import 'weather-icons/css/weather-icons-wind.css';
