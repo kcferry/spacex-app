@@ -107,7 +107,6 @@ const NextLaunchMain = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div className='info'>
                             <table className='info-table'>
                                 <tbody>
