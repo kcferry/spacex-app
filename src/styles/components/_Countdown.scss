@@ -1,11 +1,9 @@
 .countdown {
     font-family: 'Exo 2', sans-serif;
-}
-
-.countdown {
     grid-column: 1 / 1;
     grid-row: 1/1;
 }
+
 
 .count-container {
     display: flex;
@@ -75,7 +73,10 @@
     object-fit: fill;
     height: 520px;
     width: auto;
-    transition: all 5.5s ease-in;
+}
+
+.nl-details {
+    font-size: 1rem;
 }
 
 
@@ -95,6 +96,11 @@
 @media screen and (max-width: 500px) {
     .clock-box {
         font-size: .7rem;
+        margin-top: 25px;
+    }
 
+    .clock-box-grid {
+        grid-column-gap: 10px;
+        padding: 0 10px;
     }
   }

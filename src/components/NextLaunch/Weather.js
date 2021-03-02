@@ -38,22 +38,25 @@ const Weather = ({ forcast }) => {
 
                     <div>
                         <table>
-                            <tr>
-                                <td><span className='title'>Cloud Coverage:</span></td>
-                                <td>{forcast.clouds.all} %</td>
-                            </tr>
-                            <tr>
-                                <td><span className='title'>Humidity:</span></td>
-                                <td>{forcast.main.humidity} %</td>
-                            </tr>
-                            <tr>
-                                <td><span className='title'>Pressure:</span></td>
-                                <td>{forcast.main.pressure} hPa</td>
-                            </tr>
-                            <tr>
-                                <td><span className='title'>Visibility:</span></td>
-                                <td>{Math.round((forcast.visibility / 1000) * 10) / 10} km</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><span className='title'>Cloud Coverage:</span></td>
+                                    <td>{forcast.clouds.all} %</td>
+                                </tr>
+                                <tr>
+                                    <td><span className='title'>Humidity:</span></td>
+                                    <td>{forcast.main.humidity} %</td>
+                                </tr>
+                                <tr>
+                                    <td><span className='title'>Pressure:</span></td>
+                                    <td>{forcast.main.pressure} hPa</td>
+                                </tr>
+                                <tr>
+                                    <td><span className='title'>Visibility:</span></td>
+                                    <td>{Math.round((forcast.visibility / 1000) * 10) / 10} km</td>
+                                </tr>
+
+                            </tbody>
                         </table>
                     </div>
 

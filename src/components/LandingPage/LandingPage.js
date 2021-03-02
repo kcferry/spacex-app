@@ -13,8 +13,8 @@ const LandingPage = () => {
                     <img src={logo} alt="" />
 
                     <Link to='/next-launch'>
-                        <div class="btn landing-btn">
-                            <a className='title'><span className='btn-text'>Launch</span></a>
+                        <div className="">
+                            <button className='title'><span className='btn-text'>Launch</span></button>
                         </div>
                     </Link>
                 </div>

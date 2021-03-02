@@ -24,39 +24,54 @@ const Starship = () => {
     return isLoading ? (<LoadingPage />) : (
         <>
             <Header />
-            <section className='showcase-vehicle'>
+            <section className='showcase'>
                 <div className='container-vehicle-grid'>
 
-                    <div className='vechicle-description-box card'>
+                    <div className='vechicle-description-box'>
                         <h1 className='vechicle-name title'>STARSHIP</h1>
-                        <p className='nl-details'>{starshipInfo.description}</p>
+
+                        <div className="stream-modal">
+                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
+                            <Modal link={"ap-BkkrRg-o"} open={isOpen} onClose={() => setisOpen(false)} />
+                        </div>
                     </div>
 
 
                     <div className='vechicle-info-box'>
 
-                        <div className='vechicle-stats-box card'>
-                            <table>
-                                <tr>
-                                    <td><span className='title'>FIRST FLIGHT</span></td>
-                                    <td>{starshipInfo.first_flight}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>SUCCESS RATE</span></td>
-                                    <td>{starshipInfo.success_rate_pct}%</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>STAGES</span></td>
-                                    <td>{starshipInfo.stages}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>HEIGHT</span></td>
-                                    <td>{starshipInfo.height.meters}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>DIAMETER</span></td>
-                                    <td>{starshipInfo.diameter.meters}</td>
-                                </tr>
+                        <div className='vechicle-stats-box'>
+                            <table className='info-table'>
+                                <tbody>
+                                    <tr>
+                                        <td><span className='title'>FIRST FLIGHT</span></td>
+                                        <td className='table-stat'>{starshipInfo.first_flight}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>SUCCESS RATE</span></td>
+                                        <td className='table-stat'>{starshipInfo.success_rate_pct}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>STAGES</span></td>
+                                        <td className='table-stat'>{starshipInfo.stages}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>HEIGHT</span></td>
+                                        <td className='table-stat'>{starshipInfo.height.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>DIAMETER</span></td>
+                                        <td className='table-stat'>{starshipInfo.diameter.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>WEIGHT</span></td>
+                                        <td className='table-stat'>{starshipInfo.mass.kg}kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>ENGINES</span></td>
+                                        <td className='table-stat'> 37 Raptor</td>
+                                    </tr>
+
+                                </tbody>
                             </table>
                         </div>
 
@@ -66,12 +81,8 @@ const Starship = () => {
 
 
                     <div className='vechicle-img-box'>
-                        <img className='rocket-img' src={starship} alt="Falcon 9" />
+                        <img className='rocket-page-img' src={starship} alt="Falcon 9" />
 
-                        <div className="stream-modal">
-                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
-                            <Modal link={"ap-BkkrRg-o"} open={isOpen} onClose={() => setisOpen(false)} />
-                        </div>
                     </div>
 
 

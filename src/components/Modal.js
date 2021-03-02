@@ -26,7 +26,7 @@ const Modal = ({ open, onClose, link }) => {
                             src={stream}
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen='true'>
+                            allowFullScreen='true'>
                         </iframe>
                     </div>
 

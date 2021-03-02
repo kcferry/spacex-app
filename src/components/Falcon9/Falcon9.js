@@ -28,44 +28,53 @@ const Falcon9 = () => {
     return isLoading ? (<LoadingPage />) : (
         <>
             <Header />
-            <section className='showcase-vehicle'>
+            <section className='showcase'>
                 <div className='container-vehicle-grid'>
 
-                    <div className='vechicle-description-box card'>
+                    <div className='vechicle-description-box'>
                         <h1 className='vechicle-name title'>FALCON 9</h1>
-                        <p className='nl-details'>{falc9Info.description}</p>
+                        <div className="stream-modal">
+                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
+                            <Modal link={"nxSxgBKlYws"} open={isOpen} onClose={() => setisOpen(false)} />
+                        </div>
                     </div>
 
 
                     <div className='vechicle-info-box'>
 
-                        <div className='vechicle-stats-box card'>
-                            <table>
-                                <tr>
-                                    <td><span className='title'>FIRST FLIGHT</span></td>
-                                    <td>{falc9Info.first_flight}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>SUCCESS RATE</span></td>
-                                    <td>{falc9Info.success_rate_pct}%</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>STAGES</span></td>
-                                    <td>{falc9Info.stages}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>HEIGHT</span></td>
-                                    <td>{falc9Info.height.meters}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>DIAMETER</span></td>
-                                    <td>{falc9Info.diameter.meters}</td>
-                                </tr>
+                        <div className='vechicle-stats-box'>
+                            <table className='info-table'>
+                                <tbody>
+                                    <tr>
+                                        <td><span className='title'>FIRST FLIGHT</span></td>
+                                        <td className='table-stat'>{falc9Info.first_flight}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>SUCCESS RATE</span></td>
+                                        <td className='table-stat'>{falc9Info.success_rate_pct}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>STAGES</span></td>
+                                        <td className='table-stat'>{falc9Info.stages}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>HEIGHT</span></td>
+                                        <td className='table-stat'>{falc9Info.height.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>DIAMETER</span></td>
+                                        <td className='table-stat'>{falc9Info.diameter.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>WEIGHT</span></td>
+                                        <td className='table-stat'>{falc9Info.mass.kg}kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>ENGINES</span></td>
+                                        <td className='table-stat'> 9 Merlin</td>
+                                    </tr>
 
-
-
-
-
+                                </tbody>
                             </table>
                         </div>
 
@@ -75,16 +84,14 @@ const Falcon9 = () => {
 
 
                     <div className='vechicle-img-box'>
-                        <img className='rocket-img' src={falc9} alt="Falcon 9" />
+                        <img className='rocket-page-img' src={falc9} alt="Falcon 9" />
 
-                        <div className="stream-modal">
-                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
-                            <Modal link={"nxSxgBKlYws"} open={isOpen} onClose={() => setisOpen(false)} />
-                        </div>
+
                     </div>
 
 
                 </div>
+
             </section>
             <Footer />
         </>

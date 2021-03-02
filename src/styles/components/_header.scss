@@ -4,7 +4,7 @@ nav {
     align-items: center;
     top: 0;
     font-size: 1.2rem;
-    min-height: 8.5vh;
+    min-height: 8.9vh;
     width: 100%;
     background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgb(0, 0, 0)100%);
     color: $blue;
@@ -85,7 +85,7 @@ nav {
             background: linear-gradient(90deg, rgb(19, 19, 43) 0%, rgb(0, 0, 0)100%);
             left: 0;
             opacity: 1;
-            height: 110%;
+            height: 150%;
             transition: all 0.5s ease;
             z-index: 6;
             position: absolute;

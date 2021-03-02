@@ -26,39 +26,54 @@ const FalconHeavy = () => {
     return isLoading ? (<LoadingPage />) : (
         <>
             <Header />
-            <section className='showcase-vehicle'>
+            <section className='showcase'>
                 <div className='container-vehicle-grid'>
 
-                <div className='vechicle-description-box card'>
-                            <h1 className='vechicle-name title'>FALCON HEAVY</h1>
-                            <p className='nl-details'>{falcHeavyInfo.description}</p>
+                    <div className='vechicle-description-box'>
+                        <h1 className='vechicle-name title'>FALCON HEAVY</h1>
+                        <div className="stream-modal">
+                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
+                            <Modal link={"wbSwFU6tY1c"} open={isOpen} onClose={() => setisOpen(false)} />
                         </div>
+                    </div>
 
 
                     <div className='vechicle-info-box'>
 
-                        <div className='vechicle-stats-box card'>
-                            <table>
-                                <tr>
+                        <div className='vechicle-stats-box'>
+                            <table className='info-table'>
+                            <tbody>
+                            <tr>
                                     <td><span className='title'>FIRST FLIGHT</span></td>
-                                    <td>{falcHeavyInfo.first_flight}</td>
+                                    <td className='table-stat'>{falcHeavyInfo.first_flight}</td>
                                 </tr>
                                 <tr>
                                     <td><span className='title'>SUCCESS RATE</span></td>
-                                    <td>{falcHeavyInfo.success_rate_pct}%</td>
+                                    <td className='table-stat'>{falcHeavyInfo.success_rate_pct}%</td>
                                 </tr>
                                 <tr>
                                     <td><span className='title'>STAGES</span></td>
-                                    <td>{falcHeavyInfo.stages}</td>
+                                    <td className='table-stat'>{falcHeavyInfo.stages}</td>
                                 </tr>
                                 <tr>
                                     <td><span className='title'>HEIGHT</span></td>
-                                    <td>{falcHeavyInfo.height.meters}</td>
+                                    <td className='table-stat'>{falcHeavyInfo.height.meters}m</td>
                                 </tr>
                                 <tr>
                                     <td><span className='title'>DIAMETER</span></td>
-                                    <td>{falcHeavyInfo.diameter.meters}</td>
+                                    <td className='table-stat'>{falcHeavyInfo.diameter.meters}m</td>
                                 </tr>
+                                <tr>
+                                    <td><span className='title'>WEIGHT</span></td>
+                                    <td className='table-stat'>{falcHeavyInfo.mass.kg}kg</td>
+                                </tr>
+                                <tr>
+                                    <td><span className='title'>ENGINES</span></td>
+                                    <td className='table-stat'> 27 Merlin</td>
+                                </tr>
+                            
+                            
+                            </tbody>
                             </table>
                         </div>
 
@@ -68,12 +83,7 @@ const FalconHeavy = () => {
 
 
                     <div className='vechicle-img-box'>
-                        <img className='rocket-img' src={falcHeavy} alt="Falcon 9" />
-
-                        <div className="stream-modal">
-                            <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
-                            <Modal link={"wbSwFU6tY1c"} open={isOpen} onClose={() => setisOpen(false)} />
-                        </div>
+                        <img className='rocket-page-img' src={falcHeavy} alt="Falcon 9" />
                     </div>
 
 
