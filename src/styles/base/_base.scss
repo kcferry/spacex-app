@@ -53,3 +53,12 @@ button {
   color: white;
   font-size: $s-size;
 }
+
+.card {
+  background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.2), rgba(133, 129, 129, 0.1));
+  backdrop-filter: blur(0.4rem);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 10px;
+  height: auto;
+}

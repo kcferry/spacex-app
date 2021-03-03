@@ -1,10 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
-const LaunchMap = ({latitude, longitude}) => {
+const LaunchMap = ({latitude, longitude, launchName}) => {
 
     if(!latitude){
         return null
     }
+
+    if(latitude){setTimeout(function(){ }, 3000);}
 
     const position = [latitude, longitude]
 
@@ -17,7 +19,7 @@ const LaunchMap = ({latitude, longitude}) => {
             />
             <Marker position={position}>
                 <Popup>
-                    Starlink 17
+                    {launchName}
                 </Popup>
             </Marker>
         </MapContainer>

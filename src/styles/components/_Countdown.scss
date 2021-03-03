@@ -1,9 +1,3 @@
-.countdown {
-    font-family: 'Exo 2', sans-serif;
-    grid-column: 1 / 1;
-    grid-row: 1/1;
-}
-
 
 .count-container {
     display: flex;
@@ -79,8 +73,6 @@
     font-size: 1rem;
 }
 
-
-
 .stream-box{
     justify-self: center;
     margin: 20px;
@@ -93,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1130px) {
     .clock-box {
         font-size: .7rem;
         margin-top: 25px;

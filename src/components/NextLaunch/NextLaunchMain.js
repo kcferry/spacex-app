@@ -61,75 +61,75 @@ const NextLaunchMain = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
-            <div className='full-screen-div'>
-                <Header />
-                <section className='showcase'>
+            <Header />
+            <section className='showcase'>
 
-                    <div className='container grid'>
+                <div className='next-launch-grid'>
 
-                        <div className='countdown card'>
-                            <div className='count-container'>
-                                <div className='count-left-container'>
+                    <div className='main-mission-box card'>
+                        <div className='count-container'>
+                            <div className='count-left-container'>
 
-                                    <div className='mission-name-box'>
-                                        <h1>{nextLaunchItems.name}</h1>
-                                    </div>
-
-                                    <div className='clock-box'>
-                                        <NextLaunchCountdown time={nextLaunchItems.date_utc} />
-                                    </div>
-
-                                    <div className='stream-box'>
-                                        {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p className='nl-details'>Mission Details Coming Soon.</p>}
-                                    </div>
-
-
-                                    <div className="stream-modal">
-                                        <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>LIVE STREAM</span></button>
-                                        <Modal link={nextLaunchItems.links.youtube_id} open={isOpen} onClose={() => setisOpen(false)} />
-                                    </div>
-
+                                <div className='mission-name-box'>
+                                    <h1>{nextLaunchItems.name}</h1>
                                 </div>
 
-                                <div className='count-rocket-box'>
-                                    <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads} />
+                                <div className='clock-box'>
+                                    <NextLaunchCountdown time={nextLaunchItems.date_utc} />
+                                </div>
+
+                                <div className='stream-box'>
+                                    {nextLaunchItems.details ? <p className='nl-details'>{nextLaunchItems.details}</p> : <p className='nl-details'>Mission Details Coming Soon.</p>}
+                                </div>
+
+
+                                <div className="stream-modal">
+                                    <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>LIVE STREAM</span></button>
+                                    <Modal link={nextLaunchItems.links.youtube_id} open={isOpen} onClose={() => setisOpen(false)} />
                                 </div>
 
                             </div>
-                        </div>
 
-                        <div className='card'>
-                            <LaunchPad launchLocation={nextLaunchItems.launchpad} />
-                            <Weather forcast={weatherItems} />
-                            <div className='map'>
-                                <div className='leaflet-container'>
-                                    <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} />
-                                </div>
+                            <div className='count-rocket-box'>
+                                <RocketPic rocketItems={rocketItems} payloadItems={nextLaunchItems.payloads} />
                             </div>
-                        </div>
-                        <div className='info'>
-                            <table className='info-table'>
-                                <tbody>
-                                    <tr>
-                                        <td><span className='title'>Rocket</span></td>
-                                        <td>{rocketItems.name}</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span className='title'>Flight No.</span></td>
-                                        <td>{nextLaunchItems.flight_number}</td>
-                                    </tr>
-                                    <Payload payloadId={nextLaunchItems.payloads} />
-                                </tbody>
-                            </table>
-                        </div>
 
-                        <div className='details card'>
-                            <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
                         </div>
                     </div>
-                    <Footer />
-                </section>
-            </div>
+
+                    <div className='launch-site-box card'>
+                        <LaunchPad launchLocation={nextLaunchItems.launchpad} />
+                        <Weather forcast={weatherItems} />
+                        <div className='map'>
+                            <div className='leaflet-container'>
+                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} launchName={nextLaunchItems.name}/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className='mission-stats-box'>
+                        <table className='info-table'>
+                            <tbody>
+                                <tr>
+                                    <td><span className='title'>Rocket</span></td>
+                                    <td>{rocketItems.name}</td>
+                                </tr>
+                                <tr>
+                                    <td><span className='title'>Flight No.</span></td>
+                                    <td>{nextLaunchItems.flight_number}</td>
+                                </tr>
+                                <Payload payloadId={nextLaunchItems.payloads} />
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className='mission-badge-box card'>
+                        <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
+                    </div>
+                </div>
+            </section>
+            <Footer />
         </>
     )
 

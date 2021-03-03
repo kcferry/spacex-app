@@ -11,6 +11,7 @@
 @import './components/LandingPage';
 @import './components/Modal';
 @import './components/Dragon/Dragon-Page-Main';
+@import './components/nextLaunchMain';
   
   :root {
     --primary-color: #fcfcfc80
@@ -20,13 +21,12 @@
   body {
     background: url('../img/spacex-6SbFGnQTE8s-unsplash.jpg');
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     overflow: scroll;
     line-height: 1.6rem;
     color: #333;
-  
   }
 
   h1, 
@@ -44,40 +44,20 @@
   .showcase {
     position: relative;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: #fff;
     position: relative;
     margin-top: 20px;
   }
 
 
-  // Mission Badge
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .badge-img {
-    width: 40%;
-  }
+
 
   /* Utilities */
-  .container {
-    max-width: 1100px;
-    height: auto;
-    margin: 20px auto;
-  }
 
-  .card {
-    background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.2), rgba(133, 129, 129, 0.1));
-    backdrop-filter: blur(0.4rem);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-bottom: 10px;
-    height: auto;
-  }
+
+  
 
   .flex {
     display: flex;
@@ -86,46 +66,6 @@
     height: 100%;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-    gap: 20px;
-    height: auto;
-    justify-content: center; 
-    align-items: stretch;
-    align-content: start;
-  }
-  
-  @media screen and (max-width: 920px) {
-    .grid {
-      grid-template-columns: 4fr;
-    }
-
-    .showcase{
-      margin: 20px;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .grid {
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .card {
-      padding: 5px;
-    }
-
-    .container {
-      margin: 10px auto;
-    }
-  }
   
 
 
