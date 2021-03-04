@@ -1,22 +1,57 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
 
-  .title {
-    font-family: 'Exo 2', sans-serif;
-    color: $blue;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
+:root {
+  --primary-color: #fcfcfc80
+}
 
-  .description-text {
-    text-align: center;
-  }
+html,
+body {
+  background: url('../../img/spacex-6SbFGnQTE8s-unsplash.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: scroll;
+  line-height: 1.6rem;
+  color: #333;
+}
 
-  
+
+/* Showcase */
+.showcase {
+  position: relative;
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  margin-top: 20px;
+}
+
+
+h1, 
+h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 10px 0;
+}
+
+.title {
+  font-family: 'Exo 2', sans-serif;
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.description-text {
+  text-align: center;
+}
+
+
 .btn {
   border: $blue 3px solid;
   padding: 10px 30px;
@@ -30,13 +65,13 @@ a {
 }
 
 button {
-    background: rgba($color: #000000, $alpha: 0.6);
-    border: $blue 3px solid;
-    padding: 10px 30px;
-    border-radius:  5px;
-    text-decoration: none;
-    color: $blue;
-    cursor: pointer;
+  background: rgba($color: #000000, $alpha: 0.6);
+  border: $blue 3px solid;
+  padding: 10px 30px;
+  border-radius:  5px;
+  text-decoration: none;
+  color: $blue;
+  cursor: pointer;
 }
 
 .btn-text {
@@ -61,4 +96,8 @@ button {
   padding: 20px;
   margin-bottom: 10px;
   height: auto;
+}
+
+img {
+  width: 100%;
 }
