@@ -1,22 +1,21 @@
-
 .next-launch-grid {
-    width: 85%;
-    margin: 30px auto;
-    display: grid;
-    margin: 30px auto;
+  width: 85%;
+  margin: 30px auto;
+  display: grid;
+  margin: 30px auto;
 
-    grid-template-columns: 4fr 3fr;
+  grid-template-columns: 4fr 3fr;
 
-    gap: 20px;
-    align-content: center;
-    margin-bottom: 5%;
+  gap: 20px;
+  align-content: center;
+  margin-bottom: 5%;
 }
-
 
 .main-mission-box {
-    font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
     
 }
+
 
 .launch-site-box{
 
@@ -29,34 +28,31 @@
 
 // Mission Badge
 .mission-badge-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .badge-img {
-    width: 40%;
+  width: 40%;
 }
 
-
-  @media screen and (max-width: 1130px) {
-    .next-launch-grid{
+@media screen and (max-width: 1130px) {
+  .next-launch-grid{
       grid-template-columns: 2fr 2fr;
-    }
-
   }
+}
 
-  @media screen and (max-width: 899px) {
-    .next-launch-grid {
-      grid-template-columns: 1fr;
-      width: 100%;
-    }
-
+@media screen and (max-width: 899px) {
+  .next-launch-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
+}
 
-  @media screen and (max-width: 500px) {
-    .next-launch-grid {
-      padding: 0;
-    }
+@media screen and (max-width: 500px) {
+  .next-launch-grid {
+    padding: 0;
   }
+}
