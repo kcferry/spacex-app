@@ -11,6 +11,7 @@ import Modal from '../Modal'
 import Weather from './Weather'
 import Header from '../Header'
 import Footer from '../Footer'
+import LandPad from './LandPad'
 
 
 const NextLaunchMain = () => {
@@ -102,7 +103,7 @@ const NextLaunchMain = () => {
                         <Weather forcast={weatherItems} />
                         <div className='map'>
                             <div className='leaflet-container'>
-                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} launchName={nextLaunchItems.name}/>
+                                <LaunchMap latitude={launchPad.latitude} longitude={launchPad.longitude} launchName={nextLaunchItems.name} />
                             </div>
                         </div>
                     </div>
@@ -119,6 +120,7 @@ const NextLaunchMain = () => {
                                     <td><span className='title'>Flight No.</span></td>
                                     <td>{nextLaunchItems.flight_number}</td>
                                 </tr>
+                                <LandPad landpadId={nextLaunchItems.cores[0].landpad} />
                                 <Payload payloadId={nextLaunchItems.payloads} />
                             </tbody>
                         </table>

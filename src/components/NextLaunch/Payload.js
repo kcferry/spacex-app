@@ -35,10 +35,6 @@ const Payload = (payloadId) => {
         <td><span className='title'>Orbit:</span></td>
         <td>{payloadItems.orbit}</td>
       </tr>
-      <tr>
-        <td><span className='title'>Regime:</span></td>
-        <td>{payloadItems.regime}</td>
-      </tr>
     </>
   )
 };
