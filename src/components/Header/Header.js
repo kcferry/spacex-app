@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../img/clover-297753_1280.png'
+import logo from '../../img/clover-297753_1280.png'
 import { Link } from 'react-router-dom'
 import { MenuItems } from './MenuItems'
 

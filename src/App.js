@@ -8,12 +8,17 @@ import 'weather-icons/css/weather-icons.css';
 import 'weather-icons/css/weather-icons-wind.css';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import LandingPage from './components/LandingPage/LandingPage'
+import Footer from '../src/components/Footer'
+import Header from '../src/components/Header/Header'
+
 
 const App = () => {
 
   return (
     <>
       <Router>
+
+        <Header />
 
         <Switch>
           <Route path='/' exact component={LandingPage} />
@@ -24,6 +29,7 @@ const App = () => {
           <Route path='/starship' component={BigRocket} />
         </Switch>
 
+        <Footer />
       </Router>
     </>
   );

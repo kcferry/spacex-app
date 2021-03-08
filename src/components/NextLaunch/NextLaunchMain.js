@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
 import NextLaunchCountdown from './NextLaunchCountdown'
 import Payload from './Payload'
 import LaunchPad from './LaunchPad'
@@ -9,8 +8,6 @@ import RocketPic from './RocketPic'
 import LaunchMap from './LaunchMap'
 import Modal from '../Modal'
 import Weather from './Weather'
-import Header from '../Header'
-import Footer from '../Footer'
 import LandPad from './LandPad'
 
 
@@ -62,7 +59,6 @@ const NextLaunchMain = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
-            <Header />
             <section className='showcase'>
 
                 <div className='next-launch-grid'>
@@ -131,7 +127,6 @@ const NextLaunchMain = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 

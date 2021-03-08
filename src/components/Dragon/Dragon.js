@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Header from '../Header'
-import Footer from '../Footer'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
 
@@ -28,7 +26,6 @@ const Dragon = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
-            <Header />
             <section className='showcase'>
 
                 <div className='container-vehicle-grid'>
@@ -82,11 +79,8 @@ const Dragon = () => {
                         <img className='dragon-img' src={DragonImg} alt="Falcon 9" />
                     </div>
 
-
                 </div>
-
             </section>
-            <Footer />
         </>
     )
 }

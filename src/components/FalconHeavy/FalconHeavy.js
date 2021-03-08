@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Header from '../Header'
-import Footer from '../Footer'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
 
@@ -25,7 +23,6 @@ const FalconHeavy = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
-            <Header />
             <section className='showcase'>
                 <div className='container-vehicle-grid'>
 
@@ -42,54 +39,49 @@ const FalconHeavy = () => {
 
                         <div className='vechicle-stats-box'>
                             <table className='info-table'>
-                            <tbody>
-                            <tr>
-                                    <td><span className='title'>FIRST FLIGHT</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.first_flight}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>SUCCESS RATE</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.success_rate_pct}%</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>STAGES</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.stages}</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>HEIGHT</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.height.meters}m</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>DIAMETER</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.diameter.meters}m</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>WEIGHT</span></td>
-                                    <td className='table-stat'>{falcHeavyInfo.mass.kg}kg</td>
-                                </tr>
-                                <tr>
-                                    <td><span className='title'>ENGINES</span></td>
-                                    <td className='table-stat'> 27 Merlin</td>
-                                </tr>
-                            
-                            
-                            </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td><span className='title'>FIRST FLIGHT</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.first_flight}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>SUCCESS RATE</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.success_rate_pct}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>STAGES</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.stages}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>HEIGHT</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.height.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>DIAMETER</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.diameter.meters}m</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>WEIGHT</span></td>
+                                        <td className='table-stat'>{falcHeavyInfo.mass.kg}kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span className='title'>ENGINES</span></td>
+                                        <td className='table-stat'> 27 Merlin</td>
+                                    </tr>
+
+
+                                </tbody>
                             </table>
                         </div>
 
-
-
                     </div>
-
 
                     <div className='vechicle-img-box'>
                         <img className='rocket-page-img' src={falcHeavy} alt="Falcon 9" />
                     </div>
 
-
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

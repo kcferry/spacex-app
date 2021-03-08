@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Header from '../Header'
-import Footer from '../Footer'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
 
@@ -27,7 +25,6 @@ const Falcon9 = () => {
 
     return isLoading ? (<LoadingPage />) : (
         <>
-            <Header />
             <section className='showcase'>
                 <div className='container-vehicle-grid'>
 
@@ -93,7 +90,6 @@ const Falcon9 = () => {
                 </div>
 
             </section>
-            <Footer />
         </>
     )
 }
