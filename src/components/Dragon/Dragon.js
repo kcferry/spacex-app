@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
+import Footer from '../../components/Footer'
 
 import DragonImg from '../../img/D2.18705984.png'
 
@@ -80,6 +81,7 @@ const Dragon = () => {
                     </div>
 
                 </div>
+                <Footer />
             </section>
         </>
     )

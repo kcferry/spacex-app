@@ -17,7 +17,6 @@ const App = () => {
   return (
     <>
       <Router>
-
         <Header />
 
         <Switch>
@@ -29,7 +28,7 @@ const App = () => {
           <Route path='/starship' component={BigRocket} />
         </Switch>
 
-        <Footer />
+
       </Router>
     </>
   );

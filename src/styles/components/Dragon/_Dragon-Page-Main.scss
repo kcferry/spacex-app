@@ -13,12 +13,13 @@
     gap: 20px;
     align-content: center;
   }
-  
+
 
   .vechicle-info-box {      
     grid-row: 2/3;
     grid-column: 1/2;
     align-self: start;
+    width: 40vw
   }
 
   .vechicle-description-box{

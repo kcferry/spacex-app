@@ -1,5 +1,5 @@
 .next-launch-grid {
-  width: 85%;
+  width: 1100px;
   margin: 30px auto;
   display: grid;
   margin: 30px auto;
@@ -48,6 +48,8 @@
   .next-launch-grid {
     grid-template-columns: 1fr;
     width: 100%;
+    overflow: hidden;
+  
   }
 }
 

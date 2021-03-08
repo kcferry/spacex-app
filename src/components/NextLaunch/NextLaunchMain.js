@@ -9,6 +9,7 @@ import LaunchMap from './LaunchMap'
 import Modal from '../Modal'
 import Weather from './Weather'
 import LandPad from './LandPad'
+import Footer from '../../components/Footer'
 
 
 const NextLaunchMain = () => {
@@ -126,6 +127,7 @@ const NextLaunchMain = () => {
                         <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
                     </div>
                 </div>
+                <Footer />
             </section>
         </>
     )

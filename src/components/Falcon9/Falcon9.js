@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
-
+import Footer from '../../components/Footer'
 
 import falc9 from '../../img/falcon-9-spacex-falcon-9-png-414_5414.png'
 
@@ -26,6 +26,7 @@ const Falcon9 = () => {
     return isLoading ? (<LoadingPage />) : (
         <>
             <section className='showcase'>
+
                 <div className='container-vehicle-grid'>
 
                     <div className='vechicle-description-box'>
@@ -82,13 +83,11 @@ const Falcon9 = () => {
 
                     <div className='vechicle-img-box'>
                         <img className='rocket-page-img' src={falc9} alt="Falcon 9" />
-
-
                     </div>
 
 
                 </div>
-
+                <Footer />
             </section>
         </>
     )

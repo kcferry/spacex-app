@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
+import Footer from '../../components/Footer'
 
 import falcHeavy from '../../img/falconHeavy.png'
 
@@ -81,6 +82,7 @@ const FalconHeavy = () => {
                     </div>
 
                 </div>
+                <Footer />
             </section>
         </>
     )

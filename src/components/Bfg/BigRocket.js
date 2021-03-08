@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import LoadingPage from '../LoadingPage'
 import Modal from '../Modal'
+import Footer from '../../components/Footer'
+
 import starshipimg from '../../img/SS.png'
 
 const BigRocket = () => {
@@ -81,6 +83,7 @@ const BigRocket = () => {
 
 
                 </div>
+                <Footer />
             </section>
         </>
     )
