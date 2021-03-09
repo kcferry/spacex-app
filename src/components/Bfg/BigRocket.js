@@ -29,7 +29,7 @@ const BigRocket = () => {
                     <div className='vechicle-description-box'>
                         <h1 className='vechicle-name title'>STARSHIP</h1>
 
-                        <div className="stream-modal">
+                        <div className="stream-modal-box">
                             <button onClick={() => setisOpen(true)} className='title'><span className='btn-text'>First Launch</span></button>
                             <Modal link={"ODY6JWzS8WU"} open={isOpen} onClose={() => setisOpen(false)} />
 
