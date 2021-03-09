@@ -8,7 +8,6 @@ import 'weather-icons/css/weather-icons.css';
 import 'weather-icons/css/weather-icons-wind.css';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import LandingPage from './components/LandingPage/LandingPage'
-import Footer from '../src/components/Footer'
 import Header from '../src/components/Header/Header'
 
 
