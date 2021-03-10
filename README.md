@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Space Clover
 
 Space Clover is a React.js based site designed to view the next SpaceX launch, SpaceX rockets, and the test journey of Starship. The site was built as a project for my portfolio but I will be adding more features in the future as it is something I have a keen interest in. The site is utilizing the SpaceX API by [r-spacex](https://github.com/r-spacex/SpaceX-API) along with the openweather, openstreetmap and mapBox apis. This site does not have any relations with Space Exploration Technologies Corp. (SpaceX).
 
@@ -7,12 +7,12 @@ Space Clover is a React.js based site designed to view the next SpaceX launch, S
 
 Use the package manager npm.
 
-[1.] Clone this project
-[2.] Install dependencies
+1. Clone this project
+2. Install dependencies
 
 ### `npm install`
 
-[3.] Start project
+3. Start project
 
 ### `npm start`
 
