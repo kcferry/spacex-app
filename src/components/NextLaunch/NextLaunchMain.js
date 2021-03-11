@@ -114,7 +114,7 @@ const NextLaunchMain = () => {
                                     <td>{rocketItems.name}</td>
                                 </tr>
                                 <tr>
-                                    <td><span className='title'>Flight No.</span></td>
+                                    <td><span className='title'>Flight No</span></td>
                                     <td>{nextLaunchItems.flight_number}</td>
                                 </tr>
                                 <LandPad landpadId={nextLaunchItems.cores[0].landpad} />

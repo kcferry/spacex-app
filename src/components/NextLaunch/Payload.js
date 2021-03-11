@@ -16,23 +16,23 @@ const Payload = (payloadId) => {
   return (
     <>
       <tr>
-        <td><span className='title'>Payload:</span></td>
+        <td><span className='title'>Payload</span></td>
         <td>{payloadItems.name}</td>
       </tr>
       <tr>
-        <td><span className='title'>Payload Type:</span></td>
+        <td><span className='title'>Payload Type</span></td>
         <td>{payloadItems.type}</td>
       </tr>
       <tr>
-        <td><span className='title'>Customer:</span></td>
+        <td><span className='title'>Customer</span></td>
         <td>{payloadItems.customers}</td>
       </tr>
       <tr>
-        <td><span className='title'>Mass KG:</span></td>
+        <td><span className='title'>Mass KG</span></td>
         <td>{payloadItems.mass_kg}kg</td>
       </tr>
       <tr>
-        <td><span className='title'>Orbit:</span></td>
+        <td><span className='title'>Orbit</span></td>
         <td>{payloadItems.orbit}</td>
       </tr>
     </>
