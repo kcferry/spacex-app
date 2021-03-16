@@ -16,7 +16,7 @@ const LandPad = ({ landpadId }) => {
     return (
         <>
             <tr>
-                <td><span className='title'>Landing Pad:</span></td>
+                <td><span className='title'>Landing Pad</span></td>
                 <td>{landPad.full_name ? landPad.full_name : 'TBA' }</td>
             </tr>
         </>
