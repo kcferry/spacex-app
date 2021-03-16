@@ -43,7 +43,7 @@ const NextLaunchCountDown = ({ time }) => {
     <>
       {timerComponents.length ?
         <div className='clock-box-grid'>
-          <h2 className='countdown-days clock-font-time'><span >- {timerComponents[0]}</span></h2>
+          <h2 className='countdown-days clock-font-time'><div>-</div> <div>{timerComponents[0]}</div></h2>
           <h2 className='countdown-hours clock-font-time'><span >{timerComponents[1]}</span></h2>
           <h2 className='countdown-mins clock-font-time'><span >{timerComponents[2]}</span></h2>
           <h2 className='countdown-seconds clock-font-time'><span >{timerComponents[3]}</span></h2>
