@@ -13,21 +13,41 @@ import Header from '../src/components/Header/Header'
 
 const App = () => {
 
+  const routes = [
+    {
+      path: '/next-launch',
+      comp: NextLaunchMain
+    },
+    {
+      path: '/falcon-9',
+      comp: Falcon9
+    },
+    {
+      path: '/falcon-heavy',
+      comp: FalconHeavy
+    },
+    {
+      path: '/dragon',
+      comp: Dragon
+    },
+    {
+      path: '/starship',
+      comp: BigRocket
+    },
+  ]
+
   return (
     <>
       <Router>
+      
         <Header />
 
         <Switch>
           <Route path='/' exact component={LandingPage} />
-          <Route path='/next-launch' component={NextLaunchMain} />
-          <Route path='/falcon-9' component={Falcon9} />
-          <Route path='/falcon-heavy' component={FalconHeavy} />
-          <Route path='/dragon' component={Dragon} />
-          <Route path='/starship' component={BigRocket} />
+          { routes.map((page) => {
+            return <Route path={page.path} component={page.comp} /> 
+          })} 
         </Switch>
-
-
       </Router>
     </>
   );
