@@ -4,9 +4,10 @@ import falc9fair from '../../img/falc9Fairing.png'
 import falcHeavy from '../../img/falconHeavy.png'
 
 const RocketPic = ({ rocketItems, payloadItems }) => {
-    const isDragon = payloadItems.dragon
+    const isDragon = payloadItems
     const rocketName = rocketItems.name
-    let rocketPicture = undefined
+    let rocketPicture = null
+
 
     if (rocketName == 'Falcon 9' && isDragon) {
         rocketPicture = falc9crew
@@ -18,7 +19,7 @@ const RocketPic = ({ rocketItems, payloadItems }) => {
 
     return (
         <>
-            <img className='rocket-img' src={rocketPicture} alt="Falcon 9" />
+            <img className='rocket-img' src={rocketPicture} alt="Rocket" />
         </>
     )
 }

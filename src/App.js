@@ -44,7 +44,7 @@ const App = () => {
 
         <Switch>
           <Route path='/' exact component={LandingPage} />
-          { routes.map((page) => {
+          {routes.map((page) => {
             return <Route path={page.path} component={page.comp} /> 
           })} 
         </Switch>

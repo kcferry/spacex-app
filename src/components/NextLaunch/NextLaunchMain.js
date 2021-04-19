@@ -22,12 +22,15 @@ const NextLaunchMain = () => {
     const [isOpen, setisOpen] = useState(false)
 
     useEffect(() => {
-        const fetchItems = async () => {
-            const result = await axios.get('https://api.spacexdata.com/v4/launches/next')
-            setnextLaunchitems(result.data)
-            setisLoading(false)
-        }
-        fetchItems()
+            axios ({
+                method: 'GET',
+                url: 'https://api.spacexdata.com/v4/launches/next',
+            }).then(res => {
+                setnextLaunchitems(res.data)
+                setisLoading(false)
+            })
+            
+            
     }, [])
 
 
