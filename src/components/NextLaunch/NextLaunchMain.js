@@ -22,42 +22,65 @@ const NextLaunchMain = () => {
     const [isOpen, setisOpen] = useState(false)
 
     useEffect(() => {
-            axios ({
-                method: 'GET',
-                url: 'https://api.spacexdata.com/v4/launches/next',
-            }).then(res => {
-                setnextLaunchitems(res.data)
-                setisLoading(false)
-            })
-            
-            
+        const nextLaunchAPI = 'https://api.spacexdata.com/v4/launches/next'
+
+        axios({
+            method: 'GET',
+            url: nextLaunchAPI,
+        }).then(res => {
+            setnextLaunchitems(res.data)
+            setisLoading(false)
+        }).catch((e) => {
+            console.log(`Next Launch API ${e}`)
+        })
+
     }, [])
 
 
     useEffect(() => {
-        const fetchItems = async () => {
-            const result = await axios.get(`https://api.spacexdata.com/v4/launchpads/${nextLaunchItems.launchpad}`);
-            setLaunchPad(result.data)
-        }
-        fetchItems()
+
+        const nextLaunchPad = `https://api.spacexdata.com/v4/launchpads/${nextLaunchItems.launchpad}`
+
+        axios({
+            method: 'GET',
+            url: nextLaunchPad,
+        }).then(res => {
+            setLaunchPad(res.data)
+        }).catch((e) => {
+            console.log(`LaunchPad API ${e}`)
+        })
+
+        
     }, [nextLaunchItems])
 
 
     useEffect(() => {
-        const fetchItems = async () => {
-            const result = await axios.get(`https://api.spacexdata.com/v4/rockets/${nextLaunchItems.rocket}`)
-            setRocketItems(result.data)
-        }
-        fetchItems()
+        const rocketData = `https://api.spacexdata.com/v4/rockets/${nextLaunchItems.rocket}`
+
+        axios({
+            method: 'GET',
+            url: rocketData,
+        }).then(res => {
+            setRocketItems(res.data)
+        }).catch((e) => {
+            console.log(`Rocket API ${e}`)
+        })
+
     }, [nextLaunchItems])
 
 
     useEffect(() => {
-        const fetchItems = async () => {
-            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`)
-            setWeatherItems(result.data)
-        }
-        fetchItems()
+        const weatherData = `https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`
+       
+        axios({
+            method: 'GET',
+            url: weatherData,
+        }).then(res => {
+            setWeatherItems(res.data)
+        }).catch((e) => {
+            console.log(`OpenWeathermap API ${e}`)
+        })
+
     }, [launchPad])
 
 
