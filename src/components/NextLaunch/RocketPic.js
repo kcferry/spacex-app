@@ -4,14 +4,14 @@ import falc9fair from '../../img/falc9Fairing.png'
 import falcHeavy from '../../img/falconHeavy.png'
 
 const RocketPic = ({ rocketItems, payloadItems }) => {
-    const isDragon = payloadItems
+    const isDragon = payloadItems.dragon
     const rocketName = rocketItems.name
     let rocketPicture = null
 
 
-    if (rocketName == 'Falcon 9' && isDragon) {
+    if (rocketName === 'Falcon 9' && isDragon) {
         rocketPicture = falc9crew
-    } else if (rocketName == 'Falcon 9' && !isDragon) {
+    } else if (rocketName === 'Falcon 9' && !isDragon) {
         rocketPicture = falc9fair
     } else if (rocketName === 'Falcon Heavy') {
         rocketPicture = falcHeavy

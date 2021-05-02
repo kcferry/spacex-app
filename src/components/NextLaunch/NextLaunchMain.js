@@ -57,7 +57,7 @@ const NextLaunchMain = () => {
     useEffect(() => {
         const rocketData = `https://api.spacexdata.com/v4/rockets/${nextLaunchItems.rocket}`
 
-        axios({
+        axios ({
             method: 'GET',
             url: rocketData,
         }).then(res => {
