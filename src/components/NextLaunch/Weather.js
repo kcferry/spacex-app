@@ -33,7 +33,7 @@ const Weather = ({ forcast }) => {
                                 <p className='weather-icon-data'>{forcast.wind.speed}kmh</p>
                             </div>
                         </div>
-                        <p className='weather-description'>{forcast.weather[0].description}</p>
+                        <p className='weather-description'>{forcast.weather[0].description.toUpperCase()}</p>
                     </div>
 
                     <div>

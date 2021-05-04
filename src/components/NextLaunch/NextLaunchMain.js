@@ -24,7 +24,7 @@ const NextLaunchMain = () => {
     useEffect(() => {
         const nextLaunchAPI = 'https://api.spacexdata.com/v4/launches/next'
 
-        axios({
+        axios ({
             method: 'GET',
             url: nextLaunchAPI,
         }).then(res => {
