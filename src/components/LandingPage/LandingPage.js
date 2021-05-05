@@ -10,7 +10,7 @@ const LandingPage = () => {
                     <source src={vid} type='video/mp4' />
                 </video>
                 <div className='full-screen-video-content'>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="space clover logo" />
 
                     <Link to='/next-launch'>
                         <div className="">
