@@ -21,6 +21,7 @@ const Modal = ({ open, onClose, link }) => {
                 <button className='modal-close-btn' onClick={onClose}>X</button>
                     <div className="player-wrapper">
                         <iframe
+                            title='Space X Live Feed'
                             width="560" height="315"
                             src={stream}
                             frameborder="0"
