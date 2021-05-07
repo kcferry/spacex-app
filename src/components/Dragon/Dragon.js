@@ -69,6 +69,10 @@ const Dragon = () => {
                                         <td><span className='title'>ENGINES</span></td>
                                         <td className='table-stat'>18 + 8 / DRACO + SUPERDRACO</td>
                                     </tr>
+                                    <tr>
+                                        <td><span className='title'>In Orbit</span></td>
+                                        <td className='table-stat'>1 (Docked to ISS)</td>
+                                    </tr>
 
                                 </tbody>
                             </table>
