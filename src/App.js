@@ -16,7 +16,7 @@ import Header from '../src/components/Header/Header'
 const App = () => {
 
   useEffect(() => {
-    ReactGA.initialize('G-TJPVPMRLMT')
+    ReactGA.initialize('UA-196636229-1')
 
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
