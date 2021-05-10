@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga';
 import NextLaunchMain from './components/NextLaunch/NextLaunchMain';
 import Dragon from './components/Dragon/Dragon';
 import FalconHeavy from './components/FalconHeavy/FalconHeavy';
@@ -12,6 +14,13 @@ import Header from '../src/components/Header/Header'
 
 
 const App = () => {
+
+  useEffect(() => {
+    ReactGA.initialize('G-TJPVPMRLMT')
+
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
+
 
   const routes = [
     {
