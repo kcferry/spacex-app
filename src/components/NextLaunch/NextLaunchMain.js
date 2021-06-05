@@ -24,7 +24,7 @@ const NextLaunchMain = () => {
     useEffect(() => {
         const nextLaunchAPI = 'https://api.spacexdata.com/v4/launches/next'
 
-        axios ({
+        axios({
             method: 'GET',
             url: nextLaunchAPI,
         }).then(res => {
@@ -50,14 +50,14 @@ const NextLaunchMain = () => {
             console.log(`LaunchPad API ${e}`)
         })
 
-        
+
     }, [nextLaunchItems])
 
 
     useEffect(() => {
         const rocketData = `https://api.spacexdata.com/v4/rockets/${nextLaunchItems.rocket}`
 
-        axios ({
+        axios({
             method: 'GET',
             url: rocketData,
         }).then(res => {
@@ -71,7 +71,7 @@ const NextLaunchMain = () => {
 
     useEffect(() => {
         const weatherData = `https://api.openweathermap.org/data/2.5/weather?lat=${launchPad.latitude}&lon=${launchPad.longitude}&units=metric&appid=${process.env.REACT_APP_OPENWEATHER}`
-       
+
         axios({
             method: 'GET',
             url: weatherData,
@@ -149,8 +149,9 @@ const NextLaunchMain = () => {
                         </table>
                     </div>
 
+
                     <div className='mission-badge-box card'>
-                        <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" />
+                        {nextLaunchItems.links.patch.small ? <img className='badge-img' src={nextLaunchItems.links.patch.small} alt="Mission Badge" /> : <h3> No Mission Patch Available </h3>}
                     </div>
                 </div>
                 <Footer />
