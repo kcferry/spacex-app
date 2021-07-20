@@ -48,14 +48,13 @@ const App = () => {
   return (
     <>
       <Router>
-      
-        <Header />
 
+        <Header />
         <Switch>
           <Route path='/' exact component={LandingPage} />
           {routes.map((page) => {
-            return <Route path={page.path} component={page.comp} /> 
-          })} 
+            return <Route path={page.path} component={page.comp} />
+          })}
         </Switch>
       </Router>
     </>
