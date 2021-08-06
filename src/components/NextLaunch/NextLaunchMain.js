@@ -111,7 +111,7 @@ const NextLaunchMain = () => {
                       <span className="btn-text">LIVE STREAM</span>
                     </button>
                   ) : (
-                    <p>Check Back at T -2hrs for Live Stream</p>
+                    <p>Check Back At T -2hrs For Live Stream</p>
                   )}
                   <Modal
                     link={nextLaunchItems.links.youtube_id}
