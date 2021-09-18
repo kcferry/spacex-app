@@ -34,7 +34,7 @@ const BigRocket = () => {
                             <Modal link={"z9eoubnO-pE"} open={isOpen} onClose={() => setisOpen(false)} />
 
                             <button onClick={() => setisOpen2(true)} className='title btn-2'><span className='btn-text'>Live Stream</span></button>
-                            <Modal link={"sTA0GTgFn5E"} open={isOpen2} onClose={() => setisOpen2(false)} />
+                            <Modal link={"_HZCh2eGWEI"} open={isOpen2} onClose={() => setisOpen2(false)} />
                         </div>
                     </div>
 
