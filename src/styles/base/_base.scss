@@ -1,28 +1,25 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 :root {
-  --primary-color: #fcfcfc80
+  --primary-color: #fcfcfc80;
 }
 
 html,
 body {
-  background: url('../../img/spacex-6SbFGnQTE8s-unsplash.jpg');
+  background: url("../../img/spacex-6SbFGnQTE8s-unsplash.jpg");
   background-size: cover;
   min-height: 100vh;
   width: 100vw;
   margin: 0;
   overflow: scroll;
   line-height: 1.6rem;
-  color: #333;  
+  color: #333;
 }
-
-
-
 
 /* Showcase */
 .showcase {
@@ -36,8 +33,7 @@ body {
   flex-direction: column;
 }
 
-
-h1, 
+h1,
 h2 {
   font-weight: 400;
   line-height: 1.2;
@@ -45,7 +41,7 @@ h2 {
 }
 
 .title {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   color: $blue;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -55,11 +51,10 @@ h2 {
   text-align: center;
 }
 
-
 .btn {
   border: $blue 3px solid;
   padding: 10px 30px;
-  border-radius: 5px; 
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -70,9 +65,9 @@ a {
 
 button {
   background: rgba($color: #000000, $alpha: 0.6);
-  border: $blue 3px solid;
+  border: $blue 2px solid;
   padding: 10px 30px;
-  border-radius:  5px;
+  border-radius: 5px;
   text-decoration: none;
   color: $blue;
   cursor: pointer;
@@ -88,15 +83,17 @@ button {
   font-size: 0.8rem;
 }
 
-
-
-.table-stat{
+.table-stat {
   color: white;
   font-size: $s-size;
 }
 
 .card {
-  background: linear-gradient(to right bottom, rgba(30, 30, 66, 0.2), rgba(133, 129, 129, 0.1));
+  background: linear-gradient(
+    to right bottom,
+    rgba(30, 30, 66, 0.2),
+    rgba(133, 129, 129, 0.1)
+  );
   backdrop-filter: blur(0.4rem);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
